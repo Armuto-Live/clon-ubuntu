@@ -19,6 +19,23 @@ let theme = createTheme({
       },
     },
   },
+  components:{
+    MuiButtonBase:{
+      defaultProps:{
+        disableRipple:true,
+      }
+    },
+    MuiCssBaseline:{
+      styleOverrides:{
+        html:{
+          fontSize:"1rem",
+          '@media (min-width: 1681px)':{
+            fontSize:"1.125rem",
+          }
+        }
+      }
+    }
+  }
 });
 
 export default theme;
