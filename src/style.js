@@ -188,10 +188,13 @@ export const TakeOverSection=styled(Box)((theme)=>({
     backgroundBlendMode:"multiply,multiply,normal,normal",
     backgroundPosition:"top right,top left,right bottom -1px,left top",
     backgroundRepeat:"no-repeat",
-    backgroundSize:"74% 99.83%,68% 91%,103.8% 20.26%,100% 99.8%",
+    backgroundSize:"135% 97.83%,148% 83%,119% 13%,100% 99.83%",
     color:WHITE_COLOR,
     display:"flex",
     alignItems:"center",
+    "@media (min-width: 768px)": {
+      padding:"4rem 0",
+    },
 }))
 
 export const TakeOverSectionAnimation=styled(Grid)((theme)=>({
@@ -199,4 +202,57 @@ export const TakeOverSectionAnimation=styled(Grid)((theme)=>({
     marginLeft:"auto",
     marginRight:"auto",
     maxWidth:"80rem",
+    display:"flex",
 }));
+
+export const TakeOverTitle=styled('h1')((theme)=>({
+  fontWeight:"550",
+  paddingTop:"0",
+  marginTop:"0",
+  marginBottom:".95rem",
+  fontSize:"2rem",
+  lineHeight:"2.5rem",
+  maxWidth:"40em",
+}))
+export const TakeOverSubTitle=styled('p')((theme)=>({
+  fontSize:"1.5rem",
+  fontWeight:"275",
+  lineHeight:"2rem",
+  marginBottom:"1.05rem",
+  marginTop:"0",
+  maxWidth:"40em",
+  paddingTop:".45rem",
+}))
+
+export const TakeOverCtasParraf=styled('p')((theme)=>({
+  lineHeight:"1.5rem",
+  marginTop:"0",
+  paddingTop:".4rem",
+  maxWidth:"40em",
+  marginBottom:"1.1rem",
+}))
+
+export const TakeOverLinkButton=styled(Link)((theme)=>({
+  marginBottom:".6rem",
+  marginTop:"-0.4rem",
+  background:"#0e8420",
+  border:"1.5px solid #0e8420",
+  color:WHITE_COLOR,
+  cursor:"pointer",
+  display:"inline-block",
+  // margin:"0 1rem 1.2rem 0",
+  margin:"-0.4rem 0 .6rem 0",
+  padding:"calc(.4rem - 1px) 1rem",
+  textAlign:"center",
+  textDecoration:"none",
+}))
+
+export const TakeOverLinkText=styled(Link)((theme)=>({
+  color:WHITE_COLOR,
+}))
+
+export const TakeOverImg=styled('img')((theme)=>({
+  border:"0",
+  height:"auto",
+  maxWidth:"100%",
+}))
