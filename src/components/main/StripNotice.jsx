@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import {
   StripNoticeWrapper,
   StripNoticeNotification,
@@ -14,7 +16,7 @@ export const StripNotice = () => {
         <StripNoticeNotification>
           <StripNoticeNotificationContent>
             <Typography>
-              <a href="">End of standard support for 18.04 LTS - 31 May 2023</a>
+              <Link to={"/18-04"}>End of standard support for 18.04 LTS - 31 May 2023</Link>
             </Typography>
             <Typography>
               <span>

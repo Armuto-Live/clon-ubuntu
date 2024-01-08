@@ -1,14 +1,16 @@
-import React from "react";
-import { styled, Box, Button, IconButton, Link } from "@mui/material";
 
-import { Navigation } from "./components/index";
-import { Main } from "./components/main/Main";
+import { Routes, Route } from 'react-router-dom'
+import { Home } from "./pages/Home";
+import { SignIn } from "./pages/SignIn";
+import { Support18 } from "./pages/Support18";
+
 function App() {
   return (
-    <>
-      <Navigation/>
-      <Main/>
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/signIn" element={<SignIn />} />
+      <Route path="/18-04" element={<Support18 />} />
+    </Routes>
   );
 }
 

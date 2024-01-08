@@ -7,6 +7,7 @@ import {
   NavigationItems,
   NavigationItemHideSmall,
   NavigationFormButtonSearch,
+  NavigationLoginLinkHeader,
 } from "../../style";
 
 import {IconButton,Box, Typography} from '@mui/material';
@@ -29,7 +30,9 @@ export const NavigationNav = () => {
           <SearchIcon sx={{fontSize:"18px"}}/>
         </IconButton>
         <Box style={{padding:"1rem 1rem 1rem 1.5rem"}}>
-          Sign in
+          <NavigationLoginLinkHeader to={"/signIn"}>
+            Sign in
+          </NavigationLoginLinkHeader>
         </Box>
       </NavigationItemHideSmall>
     </NavigationNavContainer>

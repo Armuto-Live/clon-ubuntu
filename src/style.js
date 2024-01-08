@@ -1,4 +1,5 @@
-import { styled, Box, Grid, Button, IconButton, Link } from "@mui/material";
+import { Link } from "react-router-dom";
+import { styled, Box, Grid, Button, IconButton } from "@mui/material";
 
 const ORANGE_COLOR = "#e95420";
 const WHITE_COLOR = "#FFFFFF";
@@ -12,6 +13,15 @@ export const Layout = styled(Grid)((theme) => ({
   marginRight: "auto",
   maxWidth: "80rem",
   display: "flex",
+  "@media (min-width: 1037px)": {
+    padding: "0 1.5rem",
+    display: "flex",
+    margin: "0 auto",
+    fontSize: "1rem",
+  },
+  "@media (min-width: 1681px)": {
+    padding: "0 27px",
+  },
 }));
 
 export const Header = styled(Box)((theme) => ({
@@ -24,7 +34,6 @@ export const NavigationRow = styled(Box)((theme) => ({
   paddingRight: "0",
   maxWidth: MAX_WIDTH,
   width: "100%",
-  fontSize: ".875rem",
   "@media (min-width: 1037px)": {
     padding: "0 1.5rem",
     display: "flex",
@@ -54,6 +63,11 @@ export const NavigationLogo = styled(Box)((theme) => ({
     marginRight: "1rem",
   },
 }));
+
+export const NavigationLogoLink=styled(Link)((theme)=>({
+  display:"flex",
+}))
+
 export const NavigationImage = styled("svg")((theme) => ({
   alignSelf: "center",
   maxHeight: "1.5rem",
@@ -185,7 +199,9 @@ export const NavigationItemHideSmall = styled("ul")((theme) => ({
     alignItems: "center",
   },
 }));
+export const NavigationLoginLinkHeader=styled(Link)((theme)=>({
 
+}))
 export const TakeOverSection = styled(Box)((theme) => ({
   height: "35rem",
   paddingTop: "4rem",
@@ -283,6 +299,7 @@ export const StripNoticeNotification = styled(Box)((theme) => ({
   paddingLeft: "3rem",
   paddingTop: "calc(.5rem - 1px)",
   border: `thin solid ${GRAY_COLOR}`,
+  width:"100%",
   "&:before": {
     content: '""',
     position: "absolute",
