@@ -21,7 +21,7 @@ export const Takeover = () => {
 
   return (
     <TakeOverSection sx={{ backgroundImage }}>
-      <TakeOverSectionAnimation container>
+      <TakeOverSectionAnimation container alignItems="center">
         <Grid item xs={12} md={7} lg={7} xl={7}>
           <TakeOverTitle variant="h4">{title}</TakeOverTitle>
           <TakeOverSubTitle variant="body1">{subTitle}</TakeOverSubTitle>
@@ -34,10 +34,15 @@ export const Takeover = () => {
             </TakeOverCtasParraf>
           </Box>
         </Grid>
-        <Grid item md={5} sx={{ display: { xxs: "none", md: "block" } }}>
-          <Grid container alignItems="center" justifyContent="center">
-            <TakeOverImg src={imageSrc} width="400" height="150" />
-          </Grid>
+        <Grid
+          container
+          alignItems="center"
+          justifyContent="center"
+          item
+          md={5}
+          sx={{ display: { xxs: "none", md: "block" } }}
+        >
+          <TakeOverImg src={imageSrc} width="400" height="150" />
         </Grid>
       </TakeOverSectionAnimation>
     </TakeOverSection>

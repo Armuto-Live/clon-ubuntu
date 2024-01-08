@@ -194,6 +194,7 @@ export const TakeOverSection=styled(Box)((theme)=>({
     alignItems:"center",
     "@media (min-width: 768px)": {
       padding:"4rem 0",
+      backgroundSize:"74% 99.83%,68% 91%,103.8% 20.26%,100% 99.8%",
     },
 }))
 
