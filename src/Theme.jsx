@@ -31,6 +31,7 @@ let theme = createTheme({
           fontSize:"1rem",
           '@media (min-width: 1681px)':{
             fontSize:"1.125rem",
+            fontWeigth:"400",
           }
         }
       }

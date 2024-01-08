@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+
+import { LayoutMaxWidth } from "../LayoutMaxWidth";
+
 import {
   TakeOverSection,
   TakeOverSectionAnimation,
@@ -10,8 +13,9 @@ import {
   TakeOverImg,
 } from "../../style";
 import { Grid, Box } from "@mui/material";
-import Typography from "@mui/material/Typography";
 import { contentData } from "./contentTakeover";
+
+
 export const Takeover = () => {
   const [random] = useState(Math.floor(Math.random() * contentData.length));
 
@@ -21,7 +25,7 @@ export const Takeover = () => {
 
   return (
     <TakeOverSection sx={{ backgroundImage }}>
-      <TakeOverSectionAnimation container alignItems="center">
+      <LayoutMaxWidth>
         <Grid item xs={12} md={7} lg={7} xl={7}>
           <TakeOverTitle variant="h4">{title}</TakeOverTitle>
           <TakeOverSubTitle variant="body1">{subTitle}</TakeOverSubTitle>
@@ -35,16 +39,15 @@ export const Takeover = () => {
           </Box>
         </Grid>
         <Grid
-          container
-          alignItems="center"
-          justifyContent="center"
           item
           md={5}
           sx={{ display: { xxs: "none", md: "block" } }}
         >
-          <TakeOverImg src={imageSrc} width="400" height="150" />
+          <Grid container alignContent="center" justifyContent="center">
+            <TakeOverImg src={imageSrc} width="400" height="150" />
+          </Grid>
         </Grid>
-      </TakeOverSectionAnimation>
+      </LayoutMaxWidth>
     </TakeOverSection>
   );
 };

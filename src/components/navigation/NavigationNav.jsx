@@ -26,7 +26,7 @@ export const NavigationNav = () => {
           <Typography variant="body1" color="white" style={{marginRight:".3rem"}}>
             Search
           </Typography>
-          <SearchIcon fontSize="small"/>
+          <SearchIcon sx={{fontSize:"18px"}}/>
         </IconButton>
         <Box style={{padding:"1rem 1rem 1rem 1.5rem"}}>
           Sign in

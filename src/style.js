@@ -1,9 +1,18 @@
-import { styled, Box,Grid, Button, IconButton, Link } from "@mui/material";
+import { styled, Box, Grid, Button, IconButton, Link } from "@mui/material";
 
 const ORANGE_COLOR = "#e95420";
 const WHITE_COLOR = "#FFFFFF";
 const BLACK_COLOR = "#333333";
+const GRAY_COLOR = "#d9d9d9";
 const MAX_WIDTH = "80rem";
+
+export const Layout = styled(Grid)((theme) => ({
+  padding: "0 1rem",
+  marginLeft: "auto",
+  marginRight: "auto",
+  maxWidth: "80rem",
+  display: "flex",
+}));
 
 export const Header = styled(Box)((theme) => ({
   background: BLACK_COLOR,
@@ -24,7 +33,6 @@ export const NavigationRow = styled(Box)((theme) => ({
   },
   "@media (min-width: 1681px)": {
     padding: "0 27px",
-    fontSize: "1.125rem",
   },
 }));
 
@@ -118,7 +126,6 @@ export const NavigationItemContent = styled("li")((theme) => ({
     },
   },
   "@media (min-width: 1681px)": {
-    fontSize: "1.2rem",
     padding: "18px 36px 18px 18px",
   },
 }));
@@ -179,81 +186,119 @@ export const NavigationItemHideSmall = styled("ul")((theme) => ({
   },
 }));
 
-export const TakeOverSection=styled(Box)((theme)=>({
-    height:"35rem",
-    paddingTop:"4rem",
-    paddingBottom:"8rem",
-    backgroundColor:"#772953",
-    backgroundImage:"linear-gradient(to bottom left, rgba(119, 41, 83, 0.16) 0, rgba(119, 41, 83, 0.16) 49.9%, transparent 50%),linear-gradient(to bottom right, rgba(228, 228, 228, 0.5) 0, rgba(228, 228, 228, 0.5) 49.9%, transparent 50%),linear-gradient(to top left, white 0%, white 49.3%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%),linear-gradient(-89deg, #e95420 0%, #772953 42%, #2c001e 94%)",
-    backgroundBlendMode:"multiply,multiply,normal,normal",
-    backgroundPosition:"top right,top left,right bottom -1px,left top",
-    backgroundRepeat:"no-repeat",
-    backgroundSize:"135% 97.83%,148% 83%,119% 13%,100% 99.83%",
-    color:WHITE_COLOR,
-    display:"flex",
-    alignItems:"center",
-    "@media (min-width: 768px)": {
-      padding:"4rem 0",
-      backgroundSize:"74% 99.83%,68% 91%,103.8% 20.26%,100% 99.8%",
-    },
-}))
-
-export const TakeOverSectionAnimation=styled(Grid)((theme)=>({
-    padding:"0 1rem",
-    marginLeft:"auto",
-    marginRight:"auto",
-    maxWidth:"80rem",
-    display:"flex",
+export const TakeOverSection = styled(Box)((theme) => ({
+  height: "35rem",
+  paddingTop: "4rem",
+  paddingBottom: "8rem",
+  backgroundColor: "#772953",
+  backgroundImage:
+    "linear-gradient(to bottom left, rgba(119, 41, 83, 0.16) 0, rgba(119, 41, 83, 0.16) 49.9%, transparent 50%),linear-gradient(to bottom right, rgba(228, 228, 228, 0.5) 0, rgba(228, 228, 228, 0.5) 49.9%, transparent 50%),linear-gradient(to top left, white 0%, white 49.3%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%),linear-gradient(-89deg, #e95420 0%, #772953 42%, #2c001e 94%)",
+  backgroundBlendMode: "multiply,multiply,normal,normal",
+  backgroundPosition: "top right,top left,right bottom -1px,left top",
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "135% 97.83%,148% 83%,119% 13%,100% 99.83%",
+  color: WHITE_COLOR,
+  display: "flex",
+  alignItems: "center",
+  "@media (min-width: 768px)": {
+    padding: "4rem 0",
+    backgroundSize: "74% 99.83%,68% 91%,103.8% 20.26%,100% 99.8%",
+  },
 }));
 
-export const TakeOverTitle=styled('h1')((theme)=>({
-  fontWeight:"550",
-  paddingTop:"0",
-  marginTop:"0",
-  marginBottom:".95rem",
-  fontSize:"2rem",
-  lineHeight:"2.5rem",
-  maxWidth:"40em",
-}))
-export const TakeOverSubTitle=styled('p')((theme)=>({
-  fontSize:"1.5rem",
-  fontWeight:"275",
-  lineHeight:"2rem",
-  marginBottom:"1.05rem",
-  marginTop:"0",
-  maxWidth:"40em",
-  paddingTop:".45rem",
-}))
+export const TakeOverSectionAnimation = styled(Grid)((theme) => ({
+  padding: "0 1rem",
+  marginLeft: "auto",
+  marginRight: "auto",
+  maxWidth: "80rem",
+  display: "flex",
+}));
 
-export const TakeOverCtasParraf=styled('p')((theme)=>({
-  lineHeight:"1.5rem",
-  marginTop:"0",
-  paddingTop:".4rem",
-  maxWidth:"40em",
-  marginBottom:"1.1rem",
-}))
+export const TakeOverTitle = styled("h1")((theme) => ({
+  fontWeight: "550",
+  paddingTop: "0",
+  marginTop: "0",
+  marginBottom: ".95rem",
+  fontSize: "2rem",
+  lineHeight: "2.5rem",
+  maxWidth: "40em",
+}));
+export const TakeOverSubTitle = styled("p")((theme) => ({
+  fontSize: "1.5rem",
+  fontWeight: "275",
+  lineHeight: "2rem",
+  marginBottom: "1.05rem",
+  marginTop: "0",
+  maxWidth: "40em",
+  paddingTop: ".45rem",
+}));
 
-export const TakeOverLinkButton=styled(Link)((theme)=>({
-  marginBottom:".6rem",
-  marginTop:"-0.4rem",
-  background:"#0e8420",
-  border:"1.5px solid #0e8420",
-  color:WHITE_COLOR,
-  cursor:"pointer",
-  display:"inline-block",
+export const TakeOverCtasParraf = styled("p")((theme) => ({
+  lineHeight: "1.5rem",
+  marginTop: "0",
+  paddingTop: ".4rem",
+  maxWidth: "40em",
+  marginBottom: "1.1rem",
+}));
+
+export const TakeOverLinkButton = styled(Link)((theme) => ({
+  marginBottom: ".6rem",
+  marginTop: "-0.4rem",
+  background: "#0e8420",
+  border: "1.5px solid #0e8420",
+  color: WHITE_COLOR,
+  cursor: "pointer",
+  display: "inline-block",
   // margin:"0 1rem 1.2rem 0",
-  margin:"-0.4rem 0 .6rem 0",
-  padding:"calc(.4rem - 1px) 1rem",
-  textAlign:"center",
-  textDecoration:"none",
-}))
+  margin: "-0.4rem 0 .6rem 0",
+  padding: "calc(.4rem - 1px) 1rem",
+  textAlign: "center",
+  textDecoration: "none",
+}));
 
-export const TakeOverLinkText=styled(Link)((theme)=>({
-  color:WHITE_COLOR,
-}))
+export const TakeOverLinkText = styled(Link)((theme) => ({
+  color: WHITE_COLOR,
+}));
 
-export const TakeOverImg=styled('img')((theme)=>({
-  border:"0",
-  height:"auto",
-  maxWidth:"100%",
-}))
+export const TakeOverImg = styled("img")((theme) => ({
+  border: "0",
+  height: "auto",
+  maxWidth: "100%",
+}));
+
+export const StripNoticeWrapper = styled(Box)((theme) => ({
+  paddingTop: "2rem",
+}));
+
+export const StripNoticeNotification = styled(Box)((theme) => ({
+  position: "relative",
+  bottom: "0",
+  top: "0",
+  backgroundImage: `url("data:image/svg+xml,%3Csvg width='16' height='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 1a7 7 0 110 14A7 7 0 018 1zm0 1.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM8.75 7v5.02h-1.5V7h1.5zM8.5 3.944a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-1a.5.5 0 01-.5-.5v-1a.5.5 0 01.5-.5h1z' fill='%23666' fill-rule='nonzero'/%3E%3C/svg%3E")`,
+  marginBottom: "0",
+  backgroundPosition: "1rem 1.15rem",
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "1rem",
+  paddingBottom: "calc(.5rem - 1px)",
+  paddingLeft: "3rem",
+  paddingTop: "calc(.5rem - 1px)",
+  border: `thin solid ${GRAY_COLOR}`,
+  "&:before": {
+    content: '""',
+    position: "absolute",
+    height: "auto",
+    width: ".1875rem",
+    bottom: "-1px",
+    top: "-1px",
+    left: "0",
+    zIndex: "1",
+    backgroundColor: "#24598f",
+  },
+}));
+
+export const StripNoticeNotificationContent = styled(Box)((theme) => ({
+  marginBottom:".6rem",
+  paddingTop:".4rem",
+  maxWidth:"unset",
+  paddingRight:"2rem",
+}));
