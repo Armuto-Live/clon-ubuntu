@@ -9,6 +9,8 @@ export const contentData = [
       "https://assets.ubuntu.com/v1/fb1ea84e-Kernelt%20industries@2x.png",
     backgroundImage:
       "linear-gradient(to bottom left, rgba(119, 41, 83, 0.16) 0, rgba(119, 41, 83, 0.16) 49.9%, transparent 50%),linear-gradient(to bottom right, rgba(228, 228, 228, 0.5) 0, rgba(228, 228, 228, 0.5) 49.9%, transparent 50%),linear-gradient(to top left, white 0%, white 49.3%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%),linear-gradient(-89deg, #e95420 0%, #772953 42%, #2c001e 94%)",
+    width:"400",
+    height:"90",
   },
   {
     title: "How to run Kubernetes on bare metal?",
@@ -19,6 +21,8 @@ export const contentData = [
     imageSrc: "https://assets.ubuntu.com/v1/5eebb138-Servers.svg",
     backgroundImage:
       "linear-gradient(to bottom left, rgba(119, 41, 83, 0.16) 0, rgba(119, 41, 83, 0.16) 49.9%, transparent 50%),linear-gradient(to bottom right, rgba(228, 228, 228, 0.5) 0, rgba(228, 228, 228, 0.5) 49.9%, transparent 50%),linear-gradient(to top left, white 0%, white 49.3%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%),linear-gradient(-89deg, #e95420 0%, #772953 42%, #2c001e 94%)",
+      width:"250",
+      height:"250",
   },
   {
     title: "Maximizing Security and Compliance in the US Public Sector",
@@ -28,6 +32,8 @@ export const contentData = [
       "https://assets.ubuntu.com/v1/1349ebac-shields-security-white.svg",
     backgroundImage:
       "linear-gradient(to bottom left, rgba(119, 41, 83, 0.16) 0, rgba(119, 41, 83, 0.16) 49.9%, transparent 50%),linear-gradient(to bottom right, rgba(228, 228, 228, 0.5) 0, rgba(228, 228, 228, 0.5) 49.9%, transparent 50%),linear-gradient(to top left, white 0%, white 49.3%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%),linear-gradient(-89deg, #e95420 0%, #772953 42%, #2c001e 94%)",
+      width:"400",
+      height:"150",
   },
   {
     title: "Guide to open source vulnerability management",
@@ -38,9 +44,11 @@ export const contentData = [
       "https://assets.ubuntu.com/v1/7bc4d605-Canonical%20Ubuntu%20Pro%20Dark.png",
     backgroundImage:
       "linear-gradient(to bottom left, rgba(119, 41, 83, 0.16) 0, rgba(119, 41, 83, 0.16) 49.9%, transparent 50%),linear-gradient(to bottom right, rgba(228, 228, 228, 0.5) 0, rgba(228, 228, 228, 0.5) 49.9%, transparent 50%),linear-gradient(to top left, white 0%, white 49.3%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%),linear-gradient(-89deg, #e95420 0%, #772953 42%, #2c001e 94%)",
+      width:"400",
+      height:"90",
   },
   {
-    title: "OpenStack Ebook for Beginners",
+    title: "OpenStack Made Easy",
     subTitle:
       "Learn more about OpenStack adoption, architecture, and installation through our latest guide",
     buttonText: "Download Now",
@@ -49,5 +57,19 @@ export const contentData = [
       "https://assets.ubuntu.com/v1/dcb2963c-openstack+cloud+outlines.svg",
     backgroundImage:
       "linear-gradient(to bottom left, rgba(216, 216, 216, 0.54) 0, rgba(216, 216, 216, 0.54) 49.9%, transparent 50%),linear-gradient(to bottom right, rgba(228, 228, 228, 0.54) 0, rgba(228, 228, 228, 0.54) 49.9%, transparent 50%),linear-gradient(to top left, white 0%, white 49.3%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%),linear-gradient(201deg, #4e4e4e 0%, #333 46%, #111 90%)",
+      width:"400",
+      height:"400",
+  },
+  {
+    title: "Atresmedia domina el mercado de servicios OTT",
+    subTitle:
+      "Con la arquitectura de microservicios Charmed Kubernetes",
+    buttonText: "Download Now",
+    imageSrc:
+      "https://assets.ubuntu.com/v1/20a87078-Atresmedia+takeover.svg",
+    backgroundImage:
+      "linear-gradient(to bottom left, rgba(21, 58, 138, 0.16) 0, rgba(21, 58, 138, 0.16) 49.9%, transparent 50%),linear-gradient(to bottom right, rgba(50, 109, 230, 0.5) 0, rgba(50, 109, 230, 0.5) 49.9%, transparent 50%),linear-gradient(to top left, white 0%, white 49.3%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%),linear-gradient(74deg, #173d8b 0%, #326de6 92%)",
+      width:"250",
+      height:"163",
   },
 ];

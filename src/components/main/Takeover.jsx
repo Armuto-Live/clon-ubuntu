@@ -19,15 +19,15 @@ import { contentData } from "./contentTakeover";
 export const Takeover = () => {
   const [random] = useState(Math.floor(Math.random() * contentData.length));
 
-  const { title, subTitle, buttonText, text, imageSrc } = contentData[random];
+  const { title, subTitle, buttonText, text, imageSrc,height,width } = contentData[random];
 
   const backgroundImage = contentData[random].backgroundImage;
 
   return (
     <TakeOverSection sx={{ backgroundImage }}>
-      <LayoutMaxWidth>
+      <LayoutMaxWidth >
         <Grid item xs={12} md={7} lg={7} xl={7}>
-          <TakeOverTitle variant="h4">{title}</TakeOverTitle>
+          <TakeOverTitle>{title}</TakeOverTitle>
           <TakeOverSubTitle variant="body1">{subTitle}</TakeOverSubTitle>
           <Box>
             <TakeOverCtasParraf variant="body2">
@@ -44,7 +44,7 @@ export const Takeover = () => {
           sx={{ display: { xxs: "none", md: "block" } }}
         >
           <Grid container alignContent="center" justifyContent="center">
-            <TakeOverImg src={imageSrc} width="400" height="150" />
+            <TakeOverImg src={imageSrc} width={width} height={height} />
           </Grid>
         </Grid>
       </LayoutMaxWidth>

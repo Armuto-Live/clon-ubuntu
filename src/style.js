@@ -238,6 +238,10 @@ export const TakeOverTitle = styled("h1")((theme) => ({
   fontSize: "2rem",
   lineHeight: "2.5rem",
   maxWidth: "40em",
+  "@media (min-width: 1037px)": {
+    fontSize: "2.5rem",
+    lineHeight: "3rem",
+  },
 }));
 export const TakeOverSubTitle = styled("p")((theme) => ({
   fontSize: "1.5rem",
@@ -284,6 +288,9 @@ export const TakeOverImg = styled("img")((theme) => ({
 
 export const StripNoticeWrapper = styled(Box)((theme) => ({
   paddingTop: "2rem",
+  "@media (min-width: 1037px)": {
+    paddingTop: "4rem",
+  },
 }));
 
 export const StripNoticeNotification = styled(Box)((theme) => ({

@@ -29,6 +29,7 @@ let theme = createTheme({
       styleOverrides:{
         html:{
           fontSize:"1rem",
+          // fontFamily:'"Ubuntu variable", "Ubuntu", -apple-system, "Segoe UI", "Roboto", "Oxygen", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
           '@media (min-width: 1681px)':{
             fontSize:"1.125rem",
             fontWeigth:"400",
