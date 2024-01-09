@@ -64,7 +64,7 @@ export const contentData = [
     title: "Atresmedia domina el mercado de servicios OTT",
     subTitle:
       "Con la arquitectura de microservicios Charmed Kubernetes",
-    buttonText: "Download Now",
+    buttonText: "Descargar",
     imageSrc:
       "https://assets.ubuntu.com/v1/20a87078-Atresmedia+takeover.svg",
     backgroundImage:

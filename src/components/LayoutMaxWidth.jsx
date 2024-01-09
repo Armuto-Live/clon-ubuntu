@@ -4,7 +4,7 @@ import { Layout } from '../style'
 
 export const LayoutMaxWidth = ({children}) => {
   return (
-    <Layout container alignItems="center" >
+    <Layout container alignItems="center" justifyContent="space-between">
       {children}
     </Layout>
   )

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import {
-  StripNoticeWrapper,
+  StripNoticeWrapperNoBottom,
   StripNoticeNotification,
   StripNoticeNotificationContent,
 } from "../../style";
@@ -11,7 +11,7 @@ import { Typography } from "@mui/material";
 
 export const StripNotice = () => {
   return (
-    <StripNoticeWrapper>
+    <StripNoticeWrapperNoBottom>
       <LayoutMaxWidth>
         <StripNoticeNotification>
           <StripNoticeNotificationContent>
@@ -27,6 +27,6 @@ export const StripNotice = () => {
           </StripNoticeNotificationContent>
         </StripNoticeNotification>
       </LayoutMaxWidth>
-    </StripNoticeWrapper>
+    </StripNoticeWrapperNoBottom>
   );
 };

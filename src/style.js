@@ -12,10 +12,8 @@ export const Layout = styled(Grid)((theme) => ({
   marginLeft: "auto",
   marginRight: "auto",
   maxWidth: "80rem",
-  display: "flex",
-  "@media (min-width: 1037px)": {
+  "@media (min-width: 620px)": {
     padding: "0 1.5rem",
-    display: "flex",
     margin: "0 auto",
     fontSize: "1rem",
   },
@@ -216,7 +214,11 @@ export const TakeOverSection = styled(Box)((theme) => ({
   color: WHITE_COLOR,
   display: "flex",
   alignItems: "center",
-  "@media (min-width: 768px)": {
+  "@media (min-width: 876px)": {
+    padding: "2rem 0",
+    backgroundSize: "74% 99.83%,68% 91%,103.8% 20.26%,100% 99.8%",
+  },
+  "@media (min-width: 1037px)": {
     padding: "4rem 0",
     backgroundSize: "74% 99.83%,68% 91%,103.8% 20.26%,100% 99.8%",
   },
@@ -286,7 +288,7 @@ export const TakeOverImg = styled("img")((theme) => ({
   maxWidth: "100%",
 }));
 
-export const StripNoticeWrapper = styled(Box)((theme) => ({
+export const StripNoticeWrapperNoBottom = styled(Box)((theme) => ({
   paddingTop: "2rem",
   "@media (min-width: 1037px)": {
     paddingTop: "4rem",
