@@ -7,7 +7,9 @@ const BLACK_COLOR = "#333333";
 const GRAY_COLOR = "#d9d9d9";
 const MAX_WIDTH = "80rem";
 
-export const Layout = styled(Grid)((theme) => ({
+export const Layout = styled(Box)((theme) => ({
+  display:"grid",
+  // gridAutoFlow:"column",
   padding: "0 1rem",
   marginLeft: "auto",
   marginRight: "auto",
@@ -328,3 +330,30 @@ export const StripNoticeNotificationContent = styled(Box)((theme) => ({
   maxWidth:"unset",
   paddingRight:"2rem",
 }));
+
+export const StripNoticeLogoSection=styled(Box)((theme)=>({
+
+}));
+
+export const StripNoticeLogoSectionItems=styled(Box)((theme)=>({
+  lineHeight:"0",
+  paddingBottom:".5rem",
+  paddingTop:".5rem",
+}));
+
+export const StripNoticeLogoSectionItem=styled(Box)((theme)=>({
+  display:"inline-block",
+  margin:"0",
+  marginBottom:"-0.5rem",
+  marginRight:"3rem",
+  marginTop:"-0.5rem",
+}))
+
+export const StripNoticeLogoSectionItemImg=styled('img')((theme)=>({
+  width:"91px",
+  height:"64px",
+  "@media (min-width: 620px)": {
+    width: "137px",
+    height:"96px",
+  },
+}))

@@ -6,7 +6,7 @@ let theme = createTheme({
       xxs: 0,
       xs: 460,
       sm: 620,
-      md: 1036,
+      md: 1037,
       lg: 1376,
       xl: 1681,
     },
@@ -31,6 +31,10 @@ let theme = createTheme({
       maxWidth: "40em",
       paddingTop: ".55rem",
       letterSpacing: "0",
+      "@media (min-width: 1037px)": {
+        fontSize: "2.6rem",
+        lineHeight:"3rem",
+      },
     },
     body2:{
       fontSize:"1.5rem",

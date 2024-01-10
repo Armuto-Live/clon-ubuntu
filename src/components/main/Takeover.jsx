@@ -12,6 +12,7 @@ import {
   TakeOverLinkText,
   TakeOverImg,
 } from "../../style";
+import { GridRow } from "../global/GridRow";
 import { Grid, Box } from "@mui/material";
 import { contentData } from "./contentTakeover";
 
@@ -26,7 +27,7 @@ export const Takeover = () => {
   return (
     <TakeOverSection sx={{ backgroundImage }}>
       <LayoutMaxWidth >
-        <Grid item xs={12} md={7} lg={7} xl={7}>
+        <GridRow xxs="span 4" sm="span 6" md="span 7">
           <TakeOverTitle>{title}</TakeOverTitle>
           <TakeOverSubTitle variant="body1">{subTitle}</TakeOverSubTitle>
           <Box>
@@ -37,16 +38,15 @@ export const Takeover = () => {
               <TakeOverLinkText>{text}</TakeOverLinkText>
             </TakeOverCtasParraf>
           </Box>
-        </Grid>
-        <Grid
-          item
-          md={5}
-          sx={{ display: { xxs: "none", md: "block" } }}
+        </GridRow>
+        <GridRow
+          xxs="span 4" sm="span 4" md="span 5"
+          sx={{ display: { xxs: "none", md: "flex" } }}
         >
           <Grid container alignContent="center" justifyContent="center">
             <TakeOverImg src={imageSrc} width={width} height={height} />
           </Grid>
-        </Grid>
+        </GridRow>
       </LayoutMaxWidth>
     </TakeOverSection>
   );
