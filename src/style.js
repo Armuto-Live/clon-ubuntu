@@ -11,13 +11,15 @@ export const Layout = styled(Box)((theme) => ({
   display:"grid",
   // gridAutoFlow:"column",
   padding: "0 1rem",
-  marginLeft: "auto",
-  marginRight: "auto",
   maxWidth: "80rem",
   "@media (min-width: 620px)": {
     padding: "0 1.5rem",
     margin: "0 auto",
     fontSize: "1rem",
+  },
+  "@media (min-width: 1037px)": {
+    marginLeft: "auto",
+    marginRight: "auto",
   },
   "@media (min-width: 1681px)": {
     padding: "0 27px",
@@ -248,18 +250,21 @@ export const TakeOverTitle = styled("h1")((theme) => ({
   },
 }));
 export const TakeOverSubTitle = styled("p")((theme) => ({
-  fontSize: "1.5rem",
+  fontSize: "1.59rem",
   fontWeight: "275",
   lineHeight: "2rem",
   marginBottom: "1.05rem",
   marginTop: "0",
   maxWidth: "40em",
   paddingTop: ".45rem",
+  "@media (min-width: 1037px)": {
+    fontSize: "1.6rem",
+  },
 }));
 
 export const TakeOverCtasParraf = styled("p")((theme) => ({
   lineHeight: "1.5rem",
-  marginTop: "0",
+  marginTop: "-0.5rem",
   paddingTop: ".4rem",
   maxWidth: "40em",
   marginBottom: "1.1rem",
@@ -267,14 +272,14 @@ export const TakeOverCtasParraf = styled("p")((theme) => ({
 
 export const TakeOverLinkButton = styled(Link)((theme) => ({
   marginBottom: ".6rem",
-  marginTop: "-0.4rem",
+  // marginTop: "-0.4rem",
   background: "#0e8420",
   border: "1.5px solid #0e8420",
   color: WHITE_COLOR,
   cursor: "pointer",
   display: "inline-block",
   // margin:"0 1rem 1.2rem 0",
-  margin: "-0.4rem 0 .6rem 0",
+  margin: "0 0 .6rem 0",
   padding: "calc(.4rem - 1px) 1rem",
   textAlign: "center",
   textDecoration: "none",
