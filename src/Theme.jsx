@@ -31,9 +31,12 @@ let theme = createTheme({
       maxWidth: "40em",
       paddingTop: ".55rem",
       letterSpacing: "0",
+      "@media (min-width: 620px)": {
+        fontSize: "2.1rem",
+      },
       "@media (min-width: 1037px)": {
-        fontSize: "2.6rem",
-        lineHeight:"3rem",
+        fontSize: "2.61rem",
+        lineHeight: "3rem",
       },
     },
     body2:{
@@ -45,6 +48,9 @@ let theme = createTheme({
       marginTop:"0",
       maxWidth:"40em",
       paddingTop:".45rem",
+      "@media (min-width: 620px)": {
+        fontSize: "1.53rem",
+      },
     },
   },
   components: {

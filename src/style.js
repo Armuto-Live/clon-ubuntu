@@ -264,7 +264,7 @@ export const TakeOverSubTitle = styled("p")((theme) => ({
 
 export const TakeOverCtasParraf = styled("p")((theme) => ({
   lineHeight: "1.5rem",
-  marginTop: "-0.5rem",
+  marginTop: "0",
   paddingTop: ".4rem",
   maxWidth: "40em",
   marginBottom: "1.1rem",
@@ -344,6 +344,14 @@ export const StripNoticeLogoSectionItems=styled(Box)((theme)=>({
   lineHeight:"0",
   paddingBottom:".5rem",
   paddingTop:".5rem",
+  "@media (min-width: 620px)": {
+    paddingBottom:".75rem",
+    paddingTop:".75rem",
+  },
+  "@media (min-width: 1037px)": {
+    paddingBottom:"1rem",
+    paddingTop:"1rem",
+  },
 }));
 
 export const StripNoticeLogoSectionItem=styled(Box)((theme)=>({
@@ -352,13 +360,28 @@ export const StripNoticeLogoSectionItem=styled(Box)((theme)=>({
   marginBottom:"-0.5rem",
   marginRight:"3rem",
   marginTop:"-0.5rem",
+  "@media (min-width: 620px)": {
+    marginBottom:"-0.75rem",
+    marginTop:"-0.75rem",
+  },
+  
+  "@media (min-width: 1037px)": {
+    marginBottom:"-1rem",
+    marginTop:"-1rem",
+  },
 }))
 
 export const StripNoticeLogoSectionItemImg=styled('img')((theme)=>({
-  width:"91px",
-  height:"64px",
+  display:"block",
+  height:"4rem",
+  maxWidth:"none",
+  width:"auto",
+  border:"0",
   "@media (min-width: 620px)": {
-    width: "137px",
-    height:"96px",
+    height:"6rem",
+  },
+  
+  "@media (min-width: 1037px)": {
+    height:"8rem",
   },
 }))

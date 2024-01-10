@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Layout } from "../style";
+import { Layout } from "../../style";
 
 export const LayoutMaxWidth = ({ children, spacing, wrap }) => {
   return (

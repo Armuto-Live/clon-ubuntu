@@ -6,7 +6,7 @@ import {
   StripNoticeNotification,
   StripNoticeNotificationContent,
 } from "../../style";
-import { LayoutMaxWidth } from "../LayoutMaxWidth";
+import { LayoutMaxWidth } from "../global/LayoutMaxWidth";
 import { Typography } from "@mui/material";
 import { GridRow } from "../global/GridRow";
 export const StripNotice = () => {

@@ -20,7 +20,6 @@ const LineWidth=styled('hr')((theme)=>({
     maxWidth: "80rem",
     "@media (min-width: 620px)": {
       padding: "0 1.5rem",
-      margin: "0 auto",
       fontSize: "1rem",
     },
     "@media (min-width: 1681px)": {

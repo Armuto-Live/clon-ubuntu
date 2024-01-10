@@ -1,4 +1,12 @@
-import Reac, { useEffect, useState } from "react";
+import { LogoItem } from "./LogoItem";
+import { Typography,useMediaQuery } from "@mui/material";
+import {
+  LayoutMaxWidth,
+  GridRow,
+  Line,
+  Button,
+  LineSeparator,
+} from "../global/index";
 
 import {
   StripNoticeWrapperNoBottom,
@@ -6,29 +14,20 @@ import {
   StripNoticeLogoSectionItems,
   StripNoticeLogoSectionItem,
 } from "../../style";
-import { Grid, Typography } from "@mui/material";
-import { LayoutMaxWidth } from "../LayoutMaxWidth";
-import { GridRow } from "../global/GridRow";
-import { Line } from "../Line";
-import { Button } from "../global/Button";
-import { LineSeparator } from "../global/LineSeparator";
-import { Main } from "./Main";
-import { Takeover } from "./Takeover";
-import { LogoItem } from "./LogoItem";
+
+
 export const ModerEnterprise = () => {
-  const [widthWindow, setWidthWindow] = useState(0);
-  useEffect(() => {
-    const updateWindow = () => setWidthWindow(window.innerWidth);
-    window.addEventListener("resize", updateWindow);
-    return () => window.removeEventListener("resize", updateWindow);
-  });
+  const isSmallScreen = useMediaQuery('(min-width:768px)');
+
   return (
     <StripNoticeWrapperNoBottom>
-        <Line />
       <LayoutMaxWidth>
+        <GridRow xxs="span 4" sm="span 6" md="span 12">
+          <Line />
+        </GridRow>
         <GridRow xxs="span 4" sm="span 4" md="span 6">
           <Typography variant="h2">
-            Modern enterprise {widthWindow <= 473 ? <br /> : ""} open source
+            Modern enterprise {isSmallScreen ? '' : <br/>} open source
           </Typography>
           <Typography variant="body2">
             Security, support, and managed services from the publisher of
@@ -58,8 +57,10 @@ export const ModerEnterprise = () => {
             </StripNoticeLogoSectionItems>
           </StripNoticeLogoSection>
         </GridRow>
+        <GridRow xxs="span 4" sm="span 6" md="span 12">
+          <LineSeparator />
+        </GridRow>
       </LayoutMaxWidth>
-      <LineSeparator />
     </StripNoticeWrapperNoBottom>
   );
 };
