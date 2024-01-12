@@ -67,7 +67,9 @@ export const NavigationLogo = styled(Box)((theme) => ({
 }));
 
 export const NavigationLogoLink=styled(Link)((theme)=>({
-  display:"flex",
+  display:"inline-flex",
+  textDecoration:"none",
+  color:"#0066CC",
 }))
 
 export const NavigationImage = styled("svg")((theme) => ({

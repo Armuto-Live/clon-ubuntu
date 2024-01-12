@@ -39,6 +39,16 @@ let theme = createTheme({
         lineHeight: "3rem",
       },
     },
+    h3: {
+      fontSize: "1.5rem",
+      fontStyle: "normal",
+      fontWeight: "550",
+      lineHeight: "2rem",
+      marginBottom: "1.05rem",
+      marginTop: "0",
+      maxWidth: "40em",
+      paddingTop: ".45rem",
+    },
     body2:{
       fontSize:"1.5rem",
       fontStyle:"normal",
