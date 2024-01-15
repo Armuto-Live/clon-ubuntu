@@ -34,6 +34,8 @@ export const NavigationNav = () => {
             Sign in
           </NavigationLoginLinkHeader>
         </Box>
+        
+        <NavigationItem name={"Community"} />
       </NavigationItemHideSmall>
     </NavigationNavContainer>
   );

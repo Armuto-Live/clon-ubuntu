@@ -10,7 +10,6 @@ const LineSeparatorHr=styled('hr')((theme)=>({
     height:"1px",
     maxWidth:"80rem",
     padding: "0 1rem",
-    maxWidth: "80rem",
     "@media (min-width: 620px)": {
       padding: "2 1.5rem",
       margin: "2rem auto",

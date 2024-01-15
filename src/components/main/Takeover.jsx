@@ -30,7 +30,7 @@ export const Takeover = () => {
       <LayoutMaxWidth >
         <GridRow xxs="span 4" sm="span 6" md="span 7">
           <TakeOverTitle>{title}</TakeOverTitle>
-          <TakeOverSubTitle variant="body1">{subTitle}</TakeOverSubTitle>
+          <TakeOverSubTitle >{subTitle}</TakeOverSubTitle>
           <Box>
             <TakeOverCtasParraf variant="body2">
               <TakeOverLinkButton>{buttonText}</TakeOverLinkButton>
