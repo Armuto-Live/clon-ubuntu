@@ -1,5 +1,6 @@
 import React from 'react'
 import { Takeover,StripNotice,ModerEnterprise,LatestNews,EnergiseEngineers } from './index'
+import { OpenSourceSecurity } from './OpenSourceSecurity'
 
 export const Main = () => {
   return (
@@ -9,6 +10,7 @@ export const Main = () => {
       <ModerEnterprise/>
       <LatestNews/>
       <EnergiseEngineers/>
+      <OpenSourceSecurity/>
     </>
   )
 }

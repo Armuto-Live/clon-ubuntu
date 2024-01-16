@@ -1,7 +1,6 @@
 import React from "react";
-import { GridRow, LayoutMaxWidth, PStrip } from "../global";
+import { GridRow, LayoutMaxWidth, PStrip,LinkItem } from "../global";
 import { styled, Typography, Box } from "@mui/material";
-import { NavigationLogoLink } from "../../style";
 
 const Title = styled("p")(({ theme }) => ({
   marginBottom: ".1rem",
@@ -33,7 +32,7 @@ export const LatestNews = () => {
         <GridRow xxs="span 4" sm="span 6" md="span 12">
           <Typography variant="h3">
             Latest news from
-            <NavigationLogoLink>&nbsp;our blog {"›"}</NavigationLogoLink>
+            <LinkItem>&nbsp;our blog {"›"}</LinkItem>
           </Typography>
         </GridRow>
       </LayoutMaxWidth>
@@ -43,23 +42,23 @@ export const LatestNews = () => {
             <time>12 January 2024</time>
           </Title>
           <SubTitle>
-            <a href="">
+            <LinkItem>
               Cloud-native infrastructure – When the future meets the present
-            </a>
+            </LinkItem>
           </SubTitle>
         </GridRow>
         <GridRow xxs="span 4" md="span 3">
           <Title>10 January 2024</Title>
           <SubTitle>
-            <a href="">
+            <LinkItem>
               High Performance Computing – It’s all about the bottleneck
-            </a>
+            </LinkItem>
           </SubTitle>
         </GridRow>
         <GridRow xxs="span 4" md="span 3">
           <Title>10 January 2024</Title>
           <SubTitle>
-            <a href="">What is a sovereign cloud?</a>
+            <LinkItem href="">What is a sovereign cloud?</LinkItem>
           </SubTitle>
         </GridRow>
         <GridRow
@@ -92,10 +91,10 @@ export const LatestNews = () => {
           <GridRow>
             <Title>Spotlight</Title>
             <SubTitle>
-              <a href="">
+              <LinkItem>
                 Ubuntu Confidential VMs on Azure: Introducing Ephemeral OS disks
                 & vTPMs
-              </a>
+              </LinkItem>
             </SubTitle>
           </GridRow>
         </GridRow>

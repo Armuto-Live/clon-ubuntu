@@ -5,11 +5,13 @@ import {
   NavigationRow,
   NavigationBanner,
   NavigationLogo,
-  NavigationLogoLink,
   NavigationImage,
   NavigationLogin,
+  NavigationLogoLink,
   NavigationLoginLink,
 } from "../../style";
+
+import { LinkItem } from "../global";
 import { NavigationNav } from "./NavigationNav";
 
 export const Navigation = () => {
@@ -18,7 +20,7 @@ export const Navigation = () => {
       <NavigationRow>
         <NavigationBanner>
           <NavigationLogo>
-            <NavigationLogoLink to={"/"}>
+            <LinkItem to={"/"}>
               <NavigationImage
                 width="107px"
                 height="32px"
@@ -36,7 +38,7 @@ export const Navigation = () => {
                   ></path>
                 </g>
               </NavigationImage>
-            </NavigationLogoLink>
+            </LinkItem>
           </NavigationLogo>
           <NavigationLogin>
             <NavigationLoginLink to={"/signIn"}>Sign in</NavigationLoginLink>

@@ -1,3 +1,4 @@
+import { LinkItem } from "../global";
 import { NavigationItem } from "./NavigationItem";
 import { NavigationSearch } from "./NavigationSearch";
 
@@ -10,7 +11,7 @@ import {
   NavigationLoginLinkHeader,
 } from "../../style";
 
-import {IconButton,Box, Typography} from '@mui/material';
+import { IconButton, Box, Typography } from '@mui/material';
 import SearchIcon from "@mui/icons-material/Search";
 export const NavigationNav = () => {
   return (
@@ -23,19 +24,23 @@ export const NavigationNav = () => {
       </NavigationItems>
       <NavigationSearch />
       <NavigationItemHideSmall>
-        <IconButton size="small" style={{padding:"1rem 1rem 1rem 1.5rem",color:"white"}}>
-          <Typography variant="body1" color="white" style={{marginRight:".3rem"}}>
+        <IconButton size="small" sx={{ padding: "1rem 1rem 1rem 1.5rem", color: "white",}}>
+          <Typography variant="body1" color="white" sx={{ marginRight: ".3rem",display: { xxs: "none", md: "flex" } }}>
             Search
           </Typography>
-          <SearchIcon sx={{fontSize:"18px"}}/>
+          <SearchIcon sx={{ fontSize: "18px" }} />
         </IconButton>
-        <Box style={{padding:"1rem 1rem 1rem 1.5rem"}}>
-          <NavigationLoginLinkHeader to={"/signIn"}>
-            Sign in
-          </NavigationLoginLinkHeader>
+        <Box>
+          <LinkItem to={"/signIn"} sx={{
+            padding: "1rem", color: "white", "&:hover": {
+              textDecoration: "underline 1px",
+              textUnderlineOffset: ".075em",
+              backgroundColor: "#2b2b2b",
+            },
+          }}>
+            Sign In
+          </LinkItem>
         </Box>
-        
-        <NavigationItem name={"Community"} />
       </NavigationItemHideSmall>
     </NavigationNavContainer>
   );

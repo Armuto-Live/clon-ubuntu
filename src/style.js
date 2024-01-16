@@ -8,7 +8,7 @@ const GRAY_COLOR = "#d9d9d9";
 const MAX_WIDTH = "80rem";
 
 export const Layout = styled(Box)((theme) => ({
-  display:"grid",
+  display: "grid",
   // gridAutoFlow:"column",
   padding: "0 1rem",
   maxWidth: "80rem",
@@ -66,11 +66,11 @@ export const NavigationLogo = styled(Box)((theme) => ({
   },
 }));
 
-export const NavigationLogoLink=styled(Link)((theme)=>({
-  display:"inline-flex",
-  textDecoration:"none",
-  color:"#0066CC",
-}))
+export const NavigationLogoLink = styled(Link)((theme) => ({
+  display: "inline-flex",
+  textDecoration: "none",
+  color: "#0066CC",
+}));
 
 export const NavigationImage = styled("svg")((theme) => ({
   alignSelf: "center",
@@ -113,24 +113,32 @@ export const NavigationItems = styled("ul")((theme) => ({
   justifyContent: "space-between",
 }));
 
-export const NavigationItemContent = styled("li")((theme) => ({
+export const NavigationItemContent = styled(Link)((theme) => ({
   position: "relative",
   padding: "1rem 0.375rem",
   lineHeight: "1.5rem",
   textAlign: "center",
   flex: "1",
+  textDecoration:"none",
+  color:WHITE_COLOR,
+  "&:hover": {
+    textDecoration: "underline 1px",
+    textUnderlineOffset: ".075em",
+    backgroundColor:"#2b2b2b",
+  },
   "@media (min-width: 620px)": {
     padding: "1rem 1.5rem",
   },
   "@media (min-width: 1037px)": {
     paddingRight: "2rem",
     paddingLeft: "1rem",
-    fontWeight: "100",
+    fontWeight: "350",
+    fontSize:"1.06rem",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     "&:after": {
-      content: '" "',
+      content: '""',
       backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath fill='%23d9d9d9' d='M8.187 11.748l6.187-6.187-1.06-1.061-5.127 5.127L3.061 4.5 2 5.561z'/%3E%3C/svg%3E")`,
       backgroundPosition: "top 52% right 50%",
       backgroundRepeat: "no-repeat",
@@ -203,9 +211,7 @@ export const NavigationItemHideSmall = styled("ul")((theme) => ({
     alignItems: "center",
   },
 }));
-export const NavigationLoginLinkHeader=styled(Link)((theme)=>({
-
-}))
+export const NavigationLoginLinkHeader = styled(Link)((theme) => ({}));
 export const TakeOverSection = styled(Box)((theme) => ({
   height: "35rem",
   paddingTop: "4rem",
@@ -317,7 +323,7 @@ export const StripNoticeNotification = styled(Box)((theme) => ({
   paddingLeft: "3rem",
   paddingTop: "calc(.5rem - 1px)",
   border: `thin solid ${GRAY_COLOR}`,
-  width:"100%",
+  width: "100%",
   "&:before": {
     content: '""',
     position: "absolute",
@@ -332,58 +338,56 @@ export const StripNoticeNotification = styled(Box)((theme) => ({
 }));
 
 export const StripNoticeNotificationContent = styled(Box)((theme) => ({
-  marginBottom:".6rem",
-  paddingTop:".4rem",
-  maxWidth:"unset",
-  paddingRight:"2rem",
+  marginBottom: ".6rem",
+  paddingTop: ".4rem",
+  maxWidth: "unset",
+  paddingRight: "2rem",
 }));
 
-export const StripNoticeLogoSection=styled(Box)((theme)=>({
+export const StripNoticeLogoSection = styled(Box)((theme) => ({}));
 
+export const StripNoticeLogoSectionItems = styled(Box)((theme) => ({
+  lineHeight: "0",
+  paddingBottom: ".5rem",
+  paddingTop: ".5rem",
+  "@media (min-width: 620px)": {
+    paddingBottom: ".75rem",
+    paddingTop: ".75rem",
+  },
+  "@media (min-width: 1037px)": {
+    paddingBottom: "1rem",
+    paddingTop: "1rem",
+  },
 }));
 
-export const StripNoticeLogoSectionItems=styled(Box)((theme)=>({
-  lineHeight:"0",
-  paddingBottom:".5rem",
-  paddingTop:".5rem",
+export const StripNoticeLogoSectionItem = styled(Box)((theme) => ({
+  display: "inline-block",
+  margin: "0",
+  marginBottom: "-0.5rem",
+  marginRight: "3rem",
+  marginTop: "-0.5rem",
   "@media (min-width: 620px)": {
-    paddingBottom:".75rem",
-    paddingTop:".75rem",
+    marginBottom: "-0.75rem",
+    marginTop: "-0.75rem",
   },
+
   "@media (min-width: 1037px)": {
-    paddingBottom:"1rem",
-    paddingTop:"1rem",
+    marginBottom: "-1rem",
+    marginTop: "-1rem",
   },
 }));
 
-export const StripNoticeLogoSectionItem=styled(Box)((theme)=>({
-  display:"inline-block",
-  margin:"0",
-  marginBottom:"-0.5rem",
-  marginRight:"3rem",
-  marginTop:"-0.5rem",
+export const StripNoticeLogoSectionItemImg = styled("img")((theme) => ({
+  display: "block",
+  height: "4rem",
+  maxWidth: "none",
+  width: "auto",
+  border: "0",
   "@media (min-width: 620px)": {
-    marginBottom:"-0.75rem",
-    marginTop:"-0.75rem",
+    height: "6rem",
   },
-  
-  "@media (min-width: 1037px)": {
-    marginBottom:"-1rem",
-    marginTop:"-1rem",
-  },
-}))
 
-export const StripNoticeLogoSectionItemImg=styled('img')((theme)=>({
-  display:"block",
-  height:"4rem",
-  maxWidth:"none",
-  width:"auto",
-  border:"0",
-  "@media (min-width: 620px)": {
-    height:"6rem",
-  },
-  
   "@media (min-width: 1037px)": {
-    height:"8rem",
+    height: "8rem",
   },
-}))
+}));

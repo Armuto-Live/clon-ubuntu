@@ -5,7 +5,7 @@ import {Box,Typography} from "@mui/material";
 
 export const EnergiseEngineers = () => {
   return (
-    <PStrip>
+    <PStrip light="true">
       <LayoutMaxWidth>
         <GridRow xxs="span 4" xs="span 6" md="span 8">
           <Typography variant="h2" color="initial">
