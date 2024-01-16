@@ -1,8 +1,5 @@
 import React from 'react'
-import { Takeover } from './Takeover'
-import { StripNotice } from './StripNotice'
-import { ModerEnterprise } from './ModerEnterprise'
-import { LatestNews } from './LatestNews'
+import { Takeover,StripNotice,ModerEnterprise,LatestNews,EnergiseEngineers } from './index'
 
 export const Main = () => {
   return (
@@ -11,6 +8,7 @@ export const Main = () => {
       <StripNotice/>
       <ModerEnterprise/>
       <LatestNews/>
+      <EnergiseEngineers/>
     </>
   )
 }

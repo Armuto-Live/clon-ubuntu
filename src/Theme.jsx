@@ -21,6 +21,7 @@ let theme = createTheme({
   },
   typography: {
     fontFamily:'"Segoe UI"',
+    color:"#000",
     h2: {
       fontSize: "2rem",
       fontStyle: "normal",
@@ -59,8 +60,17 @@ let theme = createTheme({
       maxWidth:"40em",
       paddingTop:".45rem",
       "@media (min-width: 620px)": {
-        fontSize: "1.53rem",
+        fontSize: "1.54rem",
       },
+    },
+    subtitle1:{
+      marginBottom:"1.1rem",
+      lineHeight:"1.5rem",
+      marginTop:"0",
+      paddingTop:".4rem",
+      "@media (min-width:620px)":{
+        fontSize:"1.03rem",
+      }
     },
   },
   components: {
