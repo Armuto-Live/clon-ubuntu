@@ -1,5 +1,5 @@
 import React from 'react'
-import { Takeover,StripNotice,ModerEnterprise,LatestNews,EnergiseEngineers } from './index'
+import { Takeover,StripNotice,ModerEnterprise,LatestNews,EnergiseEngineers,SignificantEnterprise,PublicCloud, CarrierGradePrivateCloud } from './index'
 import { OpenSourceSecurity } from './OpenSourceSecurity'
 
 export const Main = () => {
@@ -11,6 +11,9 @@ export const Main = () => {
       <LatestNews/>
       <EnergiseEngineers/>
       <OpenSourceSecurity/>
+      <SignificantEnterprise/>
+      <PublicCloud/>
+      <CarrierGradePrivateCloud/>
     </>
   )
 }

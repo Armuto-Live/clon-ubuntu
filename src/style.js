@@ -270,12 +270,13 @@ export const TakeOverSubTitle = styled("p")((theme) => ({
   },
 }));
 
-export const TakeOverCtasParraf = styled("p")((theme) => ({
+export const TakeOverCtasParraf = styled("p")(({theme}) => ({
   lineHeight: "1.5rem",
   marginTop: "0",
   paddingTop: ".4rem",
   maxWidth: "40em",
   marginBottom: "1.1rem",
+
 }));
 
 export const TakeOverLinkButton = styled(Link)((theme) => ({
@@ -350,9 +351,13 @@ export const StripNoticeLogoSectionItems = styled(Box)((theme) => ({
   lineHeight: "0",
   paddingBottom: ".5rem",
   paddingTop: ".5rem",
+  display:"flex",
+  flexWrap:"wrap",
+  justifyContent:"space-evenly",
   "@media (min-width: 620px)": {
     paddingBottom: ".75rem",
     paddingTop: ".75rem",
+    justifyContent:"center",
   },
   "@media (min-width: 1037px)": {
     paddingBottom: "1rem",
@@ -364,7 +369,7 @@ export const StripNoticeLogoSectionItem = styled(Box)((theme) => ({
   display: "inline-block",
   margin: "0",
   marginBottom: "-0.5rem",
-  marginRight: "3rem",
+  // marginRight: "3rem",
   marginTop: "-0.5rem",
   "@media (min-width: 620px)": {
     marginBottom: "-0.75rem",
@@ -389,5 +394,18 @@ export const StripNoticeLogoSectionItemImg = styled("img")((theme) => ({
 
   "@media (min-width: 1037px)": {
     height: "8rem",
+  },
+}));
+
+export const PStripShadow=styled(Box)((theme)=>({
+  padding:"1.5rem 0",
+}))
+
+export const Items = styled("ul")(({ theme }) => ({
+  marginBottom: "1.5rem",
+  [theme.breakpoints.up("sm")]: {
+    marginRight: "1rem",
+    columns: "2",
+    columnGap: "2rem",
   },
 }));

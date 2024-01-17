@@ -6,3 +6,8 @@ export * from './ModerEnterprise';
 export * from './LogoItem';
 export * from './LatestNews';
 export * from './EnergiseEngineers';
+export * from './InlineListItem';
+export * from './ItemTicked';
+export * from './SignificantEnterprise';
+export * from './PublicCloud';
+export * from './CarrierGradePrivateCloud';

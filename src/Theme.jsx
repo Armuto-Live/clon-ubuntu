@@ -88,6 +88,12 @@ let theme = createTheme({
             fontWeigth: "400",
           },
         },
+        ul:{
+          listStyleType:"none",
+          padding:"0",
+          margin:"0",
+          marginBottom:"1.5rem",
+        }
       },
     },
   },

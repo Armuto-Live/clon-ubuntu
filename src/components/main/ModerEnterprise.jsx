@@ -29,7 +29,7 @@ export const ModerEnterprise = () => {
           <Typography variant="h2">
             Modern enterprise {isSmallScreen ? '' : <br/>} open source
           </Typography>
-          <Typography variant="body2">
+          <Typography variant="body2" >
             Security, support, and managed services from the publisher of
             Ubuntu.
           </Typography>

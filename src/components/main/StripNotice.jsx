@@ -6,9 +6,10 @@ import {
   StripNoticeNotification,
   StripNoticeNotificationContent,
 } from "../../style";
-import { LayoutMaxWidth } from "../global/LayoutMaxWidth";
+
 import { Typography } from "@mui/material";
-import { GridRow } from "../global/GridRow";
+import { GridRow,LayoutMaxWidth,LinkItem } from "../global";
+
 export const StripNotice = () => {
   return (
     <StripNoticeWrapperNoBottom>
@@ -17,7 +18,7 @@ export const StripNotice = () => {
           <StripNoticeNotification>
             <StripNoticeNotificationContent>
               <Typography>
-                <Link to={"/18-04"}>End of standard support for 18.04 LTS - 31 May 2023</Link>
+                <LinkItem to={"/18-04"}>End of standard support for 18.04 LTS - 31 May 2023</LinkItem>
               </Typography>
               <Typography>
                 <span>
