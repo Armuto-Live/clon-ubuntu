@@ -6,8 +6,7 @@ import {
 } from "../../style";
 import { PStrip, LayoutMaxWidth, GridRow, LinkItem } from "../global";
 import Typography from "@mui/material/Typography";
-import { ItemTicked } from "./ItemTicked";
-import { InlineListItem, LogoItem } from "./index";
+import { InlineListItem, LogoItem,ItemTicked } from "./index";
 
 export const PublicCloud = () => {
   return (

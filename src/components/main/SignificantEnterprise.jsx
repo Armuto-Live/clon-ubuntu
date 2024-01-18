@@ -1,6 +1,6 @@
 import { GridRow, LayoutMaxWidth, LinkItem, PStrip } from "../global";
 import { PStripShadow, Items } from "../../style";
-import {Typography,Box} from "@mui/material";
+import { Typography, Box } from "@mui/material";
 import { ItemTicked } from "./index";
 export const SignificantEnterprise = () => {
   return (
@@ -24,10 +24,17 @@ export const SignificantEnterprise = () => {
           xxs="span 4"
           sm="span 6"
           md="span 4"
-          sx={{ display: { xxs: "none", sm: "flex" },justifyContent:"center", alignItems:"center" }}
+          sx={{
+            display: { xxs: "none", sm: "flex" },
+            justifyContent: "center",
+            alignItems: "center",
+          }}
         >
           <Box>
-            <img src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_266,h_200/https://assets.ubuntu.com/v1/f129afea-Save+Money-Yen-Euro-Dollar-2020.svg" alt="" />
+            <img
+              src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_266,h_200/https://assets.ubuntu.com/v1/f129afea-Save+Money-Yen-Euro-Dollar-2020.svg"
+              alt=""
+            />
           </Box>
         </GridRow>
       </LayoutMaxWidth>
@@ -37,11 +44,14 @@ export const SignificantEnterprise = () => {
             <Items>
               <ItemTicked>No mandatory subscriptions for Ubuntu</ItemTicked>
               <ItemTicked>
-                <LinkItem>Security, support</LinkItem> and fully managed{" "}
-                <LinkItem>infra</LinkItem> and <LinkItem>apps</LinkItem>
+                <LinkItem>Security</LinkItem>, <LinkItem>support</LinkItem> and
+                fully managed <LinkItem>infra</LinkItem> and{" "}
+                <LinkItem>apps</LinkItem>
               </ItemTicked>
               <ItemTicked>
-                <LinkItem>Public cloud, data centre, edge cluster</LinkItem> and{" "}
+                <LinkItem>Public cloud</LinkItem>,{" "}
+                <LinkItem>data centre</LinkItem>,{" "}
+                <LinkItem>edge cluster</LinkItem> and{" "}
                 <LinkItem>appliances</LinkItem>
               </ItemTicked>
               <ItemTicked>

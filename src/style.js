@@ -369,14 +369,15 @@ export const StripNoticeLogoSectionItem = styled(Box)((theme) => ({
   display: "inline-block",
   margin: "0",
   marginBottom: "-0.5rem",
-  // marginRight: "3rem",
   marginTop: "-0.5rem",
+  marginRight: ".5rem",
   "@media (min-width: 620px)": {
     marginBottom: "-0.75rem",
     marginTop: "-0.75rem",
   },
-
+  
   "@media (min-width: 1037px)": {
+    marginRight: "3rem",
     marginBottom: "-1rem",
     marginTop: "-1rem",
   },
