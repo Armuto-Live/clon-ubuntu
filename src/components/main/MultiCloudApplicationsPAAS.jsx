@@ -10,7 +10,19 @@ import { InlineListItem, LogoItem, ItemTicked } from "./index";
 
 export const MultiCloudApplicationsPAAS = () => {
   return (
-    <PStrip>
+    <PStrip
+      sx={{
+        "&:after": {
+          content: '""',
+          position: "absolute",
+          height: ".1875rem",
+          bottom: "0",
+          left: "0",
+          right: "0",
+          backgroundColor: "#e95420",
+        },
+      }}
+    >
       <LayoutMaxWidth>
         <GridRow xxs="span 4" sm="span 6" md="span 12">
           <Typography variant="h2">

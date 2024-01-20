@@ -79,7 +79,7 @@ export const NavigationImage = styled("svg")((theme) => ({
 }));
 
 export const NavigationLogin = styled(Box)((theme) => ({
-  "@media (min-width: 620px)": {
+  "@media (min-width: 1037px)": {
     display: "none",
   },
 }));
@@ -95,8 +95,9 @@ export const NavigationLoginLink = styled(Link)((theme) => ({
 export const NavigationNavContainer = styled(Box)((theme) => ({
   display: "flex",
   flexDirection: "column-reverse",
+  position:"relative",
   "@media (min-width: 620px)": {
-    flexDirection: "column",
+    // flexDirection: "column",
   },
   "@media (min-width: 1037px)": {
     flexDirection: "row",
@@ -119,12 +120,12 @@ export const NavigationItemContent = styled(Link)((theme) => ({
   lineHeight: "1.5rem",
   textAlign: "center",
   flex: "1",
-  textDecoration:"none",
-  color:WHITE_COLOR,
+  textDecoration: "none",
+  color: WHITE_COLOR,
   "&:hover": {
     textDecoration: "underline 1px",
     textUnderlineOffset: ".075em",
-    backgroundColor:"#2b2b2b",
+    backgroundColor: "#2b2b2b",
   },
   "@media (min-width: 620px)": {
     padding: "1rem 1.5rem",
@@ -133,7 +134,7 @@ export const NavigationItemContent = styled(Link)((theme) => ({
     paddingRight: "2rem",
     paddingLeft: "1rem",
     fontWeight: "350",
-    fontSize:"1.06rem",
+    fontSize: "1.06rem",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -156,30 +157,40 @@ export const NavigationItemContent = styled(Link)((theme) => ({
   },
 }));
 
-export const NavigationContainerSearch = styled(Box)((theme) => ({
+export const NavigationContainerSearch = styled(Box)(({theme}) => ({
   marginTop: "1rem",
   paddingTop: "1rem",
-
-  "@media (min-width: 620px)": {
-    display: "none",
-  },
+  [theme.breakpoints.up('md')]:{
+    display:"none",
+    position:"absolute",
+    left:"0",
+    right:"0",
+    top:"0",
+    bottom:"0",
+    margin:".6rem 0 auto auto",
+    marginLeft:"1rem",
+    padding:"0",
+  }
 }));
 
-export const NavigationForm = styled("form")((theme) => ({
+export const NavigationForm = styled("form")(({theme}) => ({
   margin: "-1px 1rem 1.2rem 1rem",
   minWidth: "10em",
   display: "flex",
   justifyContent: "flex-end",
   position: "relative",
+  [theme.breakpoints.up('md')]:{
+    margin:"0",
+  }
 }));
 
-export const NavigationFormInput = styled("input")((theme) => ({
+export const NavigationFormInput = styled("input")(({theme}) => ({
   flex: "1 1 100%",
   paddingTop: "calc(0.4rem - 1px)",
   paddingBottom: "calc(0.4rem - 1px)",
   paddingRight: "4.6rem",
   paddingLeft: ".5rem",
-  // position:"absolute",
+  position: "absolute",
   marginBottom: "0",
   minWidth: "8em",
   top: "0",
@@ -190,13 +201,15 @@ export const NavigationFormInput = styled("input")((theme) => ({
   lineHeight: "1.5rem",
 }));
 
-export const NavigationFormButton = styled(IconButton)((theme) => ({}));
+export const NavigationFormButton = styled(IconButton)((theme) => ({
+  position: "relative",
+}));
 export const NavigationFormButtonClose = styled(IconButton)((theme) => ({
-  position: "absolute",
+  position: "relative",
   display: "none",
 }));
 export const NavigationFormButtonSearch = styled(IconButton)((theme) => ({
-  position: "absolute",
+  position: "relative",
 }));
 
 export const NavigationItemHideSmall = styled("ul")((theme) => ({
@@ -205,7 +218,7 @@ export const NavigationItemHideSmall = styled("ul")((theme) => ({
   margin: "0",
   padding: "0",
   // padding:"1rem 1rem 1rem 1.5rem",
-  "@media (min-width: 620px)": {
+  "@media (min-width: 1037px)": {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -270,13 +283,12 @@ export const TakeOverSubTitle = styled("p")((theme) => ({
   },
 }));
 
-export const TakeOverCtasParraf = styled("p")(({theme}) => ({
+export const TakeOverCtasParraf = styled("p")(({ theme }) => ({
   lineHeight: "1.5rem",
   marginTop: "0",
   paddingTop: ".4rem",
   maxWidth: "40em",
   marginBottom: "1.1rem",
-
 }));
 
 export const TakeOverLinkButton = styled(Link)((theme) => ({
@@ -351,13 +363,13 @@ export const StripNoticeLogoSectionItems = styled(Box)((theme) => ({
   lineHeight: "0",
   paddingBottom: ".5rem",
   paddingTop: ".5rem",
-  display:"flex",
-  flexWrap:"wrap",
-  justifyContent:"space-evenly",
+  display: "flex",
+  flexWrap: "wrap",
+  justifyContent: "space-evenly",
   "@media (min-width: 620px)": {
     paddingBottom: ".75rem",
     paddingTop: ".75rem",
-    justifyContent:"center",
+    justifyContent: "center",
   },
   "@media (min-width: 1037px)": {
     paddingBottom: "1rem",
@@ -375,7 +387,7 @@ export const StripNoticeLogoSectionItem = styled(Box)((theme) => ({
     marginBottom: "-0.75rem",
     marginTop: "-0.75rem",
   },
-  
+
   "@media (min-width: 1037px)": {
     marginRight: "3rem",
     marginBottom: "-1rem",
@@ -398,9 +410,9 @@ export const StripNoticeLogoSectionItemImg = styled("img")((theme) => ({
   },
 }));
 
-export const PStripShadow=styled(Box)((theme)=>({
-  padding:"1.5rem 0",
-}))
+export const PStripShadow = styled(Box)((theme) => ({
+  padding: "1.5rem 0",
+}));
 
 export const Items = styled("ul")(({ theme }) => ({
   marginBottom: "1.5rem",

@@ -10,14 +10,27 @@ import { InlineListItem, LogoItem, ItemTicked } from "./index";
 
 export const SmartRobotsShapesSizes = () => {
   return (
-    <PStrip>
+    <PStrip
+      sx={{
+        "&:after": {
+          content: '""',
+          position: "absolute",
+          height: "1px",
+          bottom: "0",
+          left: "0",
+          right: "0",
+          backgroundColor: "#d9d9d9",
+        },
+      }}
+    >
       <LayoutMaxWidth>
         <GridRow xxs="span 4" sm="span 6" md="span 12">
           <Typography variant="h2">
             Smart robots of all shapes and sizes
           </Typography>
           <Typography variant="body2">
-            From turtles to trucks, <LinkItem>Ubuntu drives the robot revolution</LinkItem>.
+            From turtles to trucks,{" "}
+            <LinkItem>Ubuntu drives the robot revolution</LinkItem>.
           </Typography>
         </GridRow>
       </LayoutMaxWidth>
@@ -25,10 +38,14 @@ export const SmartRobotsShapesSizes = () => {
         <LayoutMaxWidth>
           <GridRow xxs="span 4" sm="span 6" md="span 12">
             <Items>
-              <ItemTicked>Full support for <LinkItem>ROS and ROS2</LinkItem> </ItemTicked>
+              <ItemTicked>
+                Full support for <LinkItem>ROS and ROS2</LinkItem>{" "}
+              </ItemTicked>
               <ItemTicked>Security patches for long-term ROS</ItemTicked>
               <ItemTicked>Fault tolerant over-the-air updates</ItemTicked>
-              <ItemTicked><LinkItem>CIS certification</LinkItem> for ROS and ROS2 </ItemTicked>
+              <ItemTicked>
+                <LinkItem>CIS certification</LinkItem> for ROS and ROS2{" "}
+              </ItemTicked>
               <ItemTicked>
                 Trim time-to-market with SMART START consulting
               </ItemTicked>

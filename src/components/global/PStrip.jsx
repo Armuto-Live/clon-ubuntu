@@ -3,6 +3,7 @@ import { Box, styled } from "@mui/material";
 
 const StripNoticeContent = styled(Box)(
   ({theme, nopaddingtop, nopaddingbottom,light}) => ({
+    position:"relative",
     backgroundColor:`${light && "#f7f7f7"}`,
     padding: `${nopaddingtop ? 0 : "2rem"} 0 ${nopaddingbottom ? 0 : "2rem"} 0`,
     [theme.breakpoints.up('md')]:{
@@ -11,12 +12,13 @@ const StripNoticeContent = styled(Box)(
   })
 );
 
-export const PStrip = ({ children, nopaddingtop, nopaddingbottom,light }) => {
+export const PStrip = ({ children, nopaddingtop, nopaddingbottom,light,sx }) => {
   return (
     <StripNoticeContent
       nopaddingtop={nopaddingtop}
       nopaddingbottom={nopaddingbottom}
       light={light}
+      sx={sx}
     >
       {children}
     </StripNoticeContent>
