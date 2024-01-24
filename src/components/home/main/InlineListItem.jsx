@@ -1,5 +1,5 @@
 import { styled } from "@mui/material"
-import { LinkItem } from "../global";
+import { LinkItem } from "../../global";
 
 const ListItem=styled('li')(({theme})=>({
   display:"inline",

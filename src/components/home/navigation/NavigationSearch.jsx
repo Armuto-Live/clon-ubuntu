@@ -6,7 +6,7 @@ import {
   NavigationFormButton,
   NavigationFormButtonClose,
   NavigationFormButtonSearch,
-} from "../../style";
+} from "../../../style";
 
 import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from "@mui/icons-material/Close";

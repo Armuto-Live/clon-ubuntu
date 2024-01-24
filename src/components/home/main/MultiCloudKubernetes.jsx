@@ -1,11 +1,11 @@
 import { Typography } from "@mui/material";
-import { LayoutMaxWidth, PStrip, GridRow, LinkItem } from "../global";
+import { LayoutMaxWidth, PStrip, GridRow, LinkItem } from "../../global";
 import {
   PStripShadow,
   Items,
   StripNoticeLogoSection,
   StripNoticeLogoSectionItems,
-} from "../../style";
+} from "../../../style";
 import { InlineListItem, LogoItem, ItemTicked } from "./index";
 
 export const MultiCloudKubernetes = () => {

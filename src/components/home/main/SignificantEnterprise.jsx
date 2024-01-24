@@ -1,5 +1,5 @@
-import { GridRow, LayoutMaxWidth, LinkItem, PStrip } from "../global";
-import { PStripShadow, Items } from "../../style";
+import { GridRow, LayoutMaxWidth, LinkItem, PStrip } from "../../global";
+import { PStripShadow, Items } from "../../../style";
 import { Typography, Box } from "@mui/material";
 import { ItemTicked } from "./index";
 export const SignificantEnterprise = () => {

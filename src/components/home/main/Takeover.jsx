@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { Grid, Box } from "@mui/material";
-import { GridRow,LayoutMaxWidth } from "../global";
+import { GridRow,LayoutMaxWidth } from "../../global";
 
 import {
   TakeOverSection,
@@ -12,7 +12,7 @@ import {
   TakeOverLinkButton,
   TakeOverLinkText,
   TakeOverImg,
-} from "../../style";
+} from "../../../style";
 
 
 import { contentData } from "./contentTakeover";

@@ -1,5 +1,5 @@
 import React from "react";
-import { GridRow, LayoutMaxWidth, PStrip,LinkItem } from "../global";
+import { GridRow, LayoutMaxWidth, PStrip,LinkItem } from "../../global";
 import { styled, Typography, Box } from "@mui/material";
 
 const Title = styled("p")(({ theme }) => ({

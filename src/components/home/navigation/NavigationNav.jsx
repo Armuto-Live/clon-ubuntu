@@ -1,4 +1,4 @@
-import { LinkItem } from "../global";
+import { LinkItem } from "../../global";
 import { NavigationItem } from "./NavigationItem";
 import { NavigationSearch } from "./NavigationSearch";
 
@@ -8,7 +8,7 @@ import {
   NavigationItemHideSmall,
   NavigationFormButtonSearch,
   NavigationLoginLinkHeader,
-} from "../../style";
+} from "../../../style";
 
 import { IconButton, Box, Typography } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";

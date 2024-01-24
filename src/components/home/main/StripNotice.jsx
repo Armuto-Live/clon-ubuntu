@@ -1,14 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import {
   StripNoticeWrapperNoBottom,
   StripNoticeNotification,
   StripNoticeNotificationContent,
-} from "../../style";
+} from "../../../style";
 
 import { Typography } from "@mui/material";
-import { GridRow,LayoutMaxWidth,LinkItem } from "../global";
+import { GridRow,LayoutMaxWidth,LinkItem } from "../../global/index";
 
 export const StripNotice = () => {
   return (

@@ -9,9 +9,9 @@ import {
   NavigationLogin,
   NavigationLogoLink,
   NavigationLoginLink,
-} from "../../style";
+} from "../../../style";
 
-import { LinkItem } from "../global";
+import { LinkItem } from "../../global";
 import { NavigationNav } from "./NavigationNav";
 
 export const Navigation = () => {

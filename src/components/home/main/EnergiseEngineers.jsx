@@ -1,6 +1,6 @@
 import React from "react";
 
-import { PStrip, LayoutMaxWidth, GridRow, LinkItem } from "../global/index";
+import { PStrip, LayoutMaxWidth, GridRow, LinkItem } from "../../global/index";
 import { Box, Typography } from "@mui/material";
 import { InlineListItem } from "./index";
 

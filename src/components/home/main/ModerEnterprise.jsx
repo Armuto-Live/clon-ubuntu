@@ -6,14 +6,14 @@ import {
   Line,
   Button,
   LineSeparator,
-} from "../global/index";
+} from "../../global/index";
 
 import {
   StripNoticeWrapperNoBottom,
   StripNoticeLogoSection,
   StripNoticeLogoSectionItems,
   StripNoticeLogoSectionItem,
-} from "../../style";
+} from "../../../style";
 
 
 export const ModerEnterprise = () => {

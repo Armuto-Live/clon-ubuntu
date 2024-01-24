@@ -1,14 +1,15 @@
-import { PStripShadow,Items } from "../../style";
-import { PStrip, LayoutMaxWidth, GridRow, LinkItem } from "../global";
+import { PStrip, LayoutMaxWidth, GridRow, LinkItem } from "../../global";
 import { styled, Typography, Box } from "@mui/material";
 import { ItemTicked } from "./ItemTicked";
 import { InlineListItem } from "./index";
 import { Link } from "react-router-dom";
 
 import {
+  PStripShadow,
+  Items,
   StripNoticeLogoSection,
   StripNoticeLogoSectionItems,
-} from "../../style";
+} from "../../../style";
 
 import { LogoItem } from "./LogoItem";
 

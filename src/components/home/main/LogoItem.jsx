@@ -4,7 +4,7 @@ import {
   StripNoticeLogoSectionItems,
   StripNoticeLogoSectionItem,
   StripNoticeLogoSectionItemImg,
-} from "../../style";
+} from "../../../style";
 export const LogoItem = ({src,alt}) => {
   return (
     <StripNoticeLogoSectionItem>

@@ -3,8 +3,8 @@ import {
   Items,
   StripNoticeLogoSection,
   StripNoticeLogoSectionItems,
-} from "../../style";
-import { PStrip, LayoutMaxWidth, GridRow, LinkItem } from "../global";
+} from "../../../style";
+import { PStrip, LayoutMaxWidth, GridRow, LinkItem } from "../../global";
 import Typography from "@mui/material/Typography";
 import { InlineListItem, LogoItem, ItemTicked } from "./index";
 

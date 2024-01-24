@@ -8,7 +8,7 @@ import {
   useMediaQuery,
 } from "@mui/material";
 
-import { LayoutMaxWidth, GridRow, LinkItem } from "../global/index";
+import { LayoutMaxWidth, GridRow, LinkItem } from "../../global/index";
 
 import { DataFooter } from "./contentFooter.js";
 
