@@ -468,13 +468,7 @@ export const DataFooter = [
     },
     {
       id:24,
-      title:"Canonical Embedding",
-      link:"/#",
-      menu:[],
-    },
-    {
-      id:25,
-      title:"Programme",
+      title:"Canonical Embedding Programme",
       link:"/#",
       menu:[],
     }
