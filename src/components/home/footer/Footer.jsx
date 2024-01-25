@@ -56,17 +56,17 @@ export const Footer = () => {
       <LayoutMaxWidth sx={{ padding: "0" }}>
         {DataFooter.map(({ id, title, menu }) => {
           return (
-            <GridRow xxs="span 4" sm="span 2" md="span 2">
-                <FooterLinks key={id}>
+            <GridRow xxs="span 4" sm="span 2" md="span 2" key={id}>
+                <FooterLinks>
                   <FooterItem
                     expanded={!isSmallScreen ? expanded : true}
                     onChange={!isSmallScreen ? handleExpanded : () => {}}
                   >
                     <FooterTitle sx={{ padding: "0" }}>{title}</FooterTitle>
-                    {menu.map(({ name, link, index }) => {
+                    {menu.map(({ name, link },index) => {
                       return (
-                        <AccordionDetails sx={{ padding: "0" }}>
-                          <LinkItem sx={{ color: "black" }} key={index}>
+                        <AccordionDetails sx={{ padding: "0" }}key={index}>
+                          <LinkItem sx={{ color: "black"}} >
                             {name}
                           </LinkItem>
                         </AccordionDetails>

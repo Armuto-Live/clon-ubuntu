@@ -2,7 +2,7 @@ import React from 'react'
 
 import { styled } from '@mui/material'
 
-const LineWidth=styled('hr')((theme)=>({
+const LineWidth=styled('hr')(({theme})=>({
     marginLeft:"auto",
     marginRight:"auto",
     border:"0",
@@ -23,8 +23,8 @@ const LineWidth=styled('hr')((theme)=>({
     },
 }))
 
-export const Line = () => {
+export const Line = ({sx}) => {
   return (
-      <LineWidth/>
+      <LineWidth sx={sx}/>
   )
 }

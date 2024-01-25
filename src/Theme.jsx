@@ -20,7 +20,7 @@ let theme = createTheme({
     },
   },
   typography: {
-    fontFamily:'"Segoe UI"',
+    fontFamily:'ubuntu',
     color:"#000",
     h2: {
       fontSize: "2rem",

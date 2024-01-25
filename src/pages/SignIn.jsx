@@ -1,8 +1,10 @@
+import {Main, Navigation} from '../components/signin/index'
 
 export const SignIn = () => {
   return (
     <>
-      <p>SignIn</p>
+      <Navigation/>
+      <Main/>
     </>
   );
 };
