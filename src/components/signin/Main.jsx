@@ -1,17 +1,15 @@
 import { useState } from "react";
 
 import { styled, Box, Typography } from "@mui/material";
-import { MainLogin,MainRegister,FormInput } from "./index";
+import { MainLogin, MainRegister, FormInput,Label } from "./index";
 import {
   PStrip,
   LayoutMaxWidth,
   GridRow,
   Line,
+  LinkItem,
 } from "../global/index";
 
-
-
-const Content = styled(Box)(({ theme }) => ({}));
 const Title = styled(Typography)(({ theme }) => ({
   fontSize: "2.22819rem",
   lineHeight: "3rem",
@@ -38,12 +36,12 @@ const FormTitle = styled(Typography)(({ theme }) => ({
   lineHeight: "1.5rem",
   marginBottom: ".7rem",
   paddingTop: "0.301rem",
-  fontWeight: "300",  
+  fontWeight: "300",
   [theme.breakpoints.up("md")]: {
     fontSize: "1.30612rem",
     lineHeight: "2rem",
-    marginBottom:".95rem",
-    paddingTop:"0.051rem",
+    marginBottom: ".95rem",
+    paddingTop: "0.051rem",
   },
 }));
 
@@ -55,25 +53,34 @@ const LoginFormLabel = styled("label")(({ theme }) => ({
   paddingTop: ".4rem",
 }));
 
-
 const LoginFormRadio = styled("input")(({ theme }) => ({
   margin: "0",
   width: "1rem",
   height: "1rem",
 }));
 
+const TableContent = styled(Box)(({ theme }) => ({
+  borderTop: "thin solid #cdcdcd",
+  padding: "0 1.5rem",
+  [theme.breakpoints.up("md")]: {
+    padding: "0 1rem",
+    borderTop:"none",
+    borderLeft:"thin solid #cdcdcd",
+  },
+}));
+
 export const Main = () => {
   const [isLogin, setIsLogin] = useState(true);
 
-    const changeOption=(e)=>{
-        if(e.target.value ==='login'){
-            return setIsLogin(true);
-        }
-        setIsLogin(false);
+  const changeOption = (e) => {
+    if (e.target.value === "login") {
+      return setIsLogin(true);
     }
+    setIsLogin(false);
+  };
 
   return (
-    <Content>
+    <>
       <PStrip
         sx={{
           padding: "1rem 0",
@@ -100,7 +107,7 @@ export const Main = () => {
                 <Box>
                   <form action="">
                     <div>
-                      <LoginFormLabel>Please type your email:</LoginFormLabel>
+                      <Label>Please type your email:</Label>
                       <FormInput placeholder="Your email address" />
                       <Box display="flex" alignItems="center">
                         <LoginFormRadio
@@ -110,12 +117,12 @@ export const Main = () => {
                           name="user-intentions"
                           onChange={changeOption}
                         />
-                        <LoginFormLabel
+                        <Label
                           htmlFor="new_user"
                           sx={{ paddingLeft: "1rem" }}
                         >
                           I don’t have an Ubuntu One account
-                        </LoginFormLabel>
+                        </Label>
                       </Box>
                       <Box display="flex" alignItems="center">
                         <LoginFormRadio
@@ -126,24 +133,36 @@ export const Main = () => {
                           onChange={changeOption}
                           defaultChecked
                         />
-                        <LoginFormLabel
+                        <Label
                           htmlFor="return_user"
                           sx={{ paddingLeft: "1rem" }}
                         >
                           I have an Ubuntu One account{" "}
                           <i>and my password is:</i>
-                        </LoginFormLabel>
+                        </Label>
                       </Box>
                     </div>
-                    {isLogin ? <MainLogin/> : <MainRegister/>}
+                    {isLogin ? <MainLogin /> : <MainRegister />}
                   </form>
                 </Box>
               </Box>
             </Form>
-            <aside></aside>
+          </GridRow>
+          <GridRow xxs="span 4" xs="span 6" md="span 6">
+            <TableContent>
+              <Typography variant="subtitle1" sx={{fontWeight:"300"}}>
+                Ubuntu One is the single account you use to log in to all
+                services and sites related to Ubuntu.
+              </Typography>
+              <Typography variant="subtitle1" sx={{fontWeight:"300"}}>
+                If you have an existing Ubuntu Single Sign On account, this is
+                now called your Ubuntu One account. {" "}
+              <LinkItem>Read More ›</LinkItem>
+              </Typography>
+            </TableContent>
           </GridRow>
         </LayoutMaxWidth>
       </PStrip>
-    </Content>
+    </>
   );
 };

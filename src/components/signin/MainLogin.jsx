@@ -1,5 +1,5 @@
 import React from "react";
-import { FormInput } from "./index";
+import { FormInput,FormButton } from "./index";
 import { styled, Box } from "@mui/material";
 
 const ButtonSubmit = styled("button")(({ theme }) => ({
@@ -40,7 +40,7 @@ export const MainLogin = () => {
     <>
       <FormInput placeholder="Contraseña" />
       <Box>
-        <ButtonSubmit type="submit">Iniciar sesión</ButtonSubmit>
+        <FormButton text="Iniciar sesión" />
         <InputSubmit type="submit" value="Forgot your password?" />
       </Box>
     </>
