@@ -96,6 +96,10 @@ let theme = createTheme({
         }
       },
     },
+    MuiAccordionSummary:{
+      disableGutters:true,
+      borderRadius:"0",
+    },
   },
 });
 

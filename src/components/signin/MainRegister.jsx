@@ -1,54 +1,46 @@
-import { Typography,Box } from "@mui/material";
+import { Typography, Box } from "@mui/material";
 import React from "react";
 
-import { Label,FormInput,FormButton } from "./index";
+import {
+  Label,
+  FormInputText,
+  FormButton,
+  FormHelpText,
+  FormInputRadioCheck,
+} from "./index";
 
 export const MainRegister = () => {
   return (
     <>
       <Label>
-      Please tell us your full name and choose a username and password:
+        Please tell us your full name and choose a username and password:
       </Label>
       <Box>
-        <Label>
-          Full name
-        </Label>
-        <FormInput placeholder="Your full name"/>
+        <Label>Full name</Label>
+        <FormInputText placeholder="Your full name" />
       </Box>
       <Box>
-        <Label>
-          Username
-        </Label>
-        <FormInput placeholder="Username"/>
-        <ul>
-          <li>Between 3 and 32 characters long.</li>
-          <li>Allowed: lowercase letters, numbers and hyphens.</li>
-          <li>
-            <strong>NOT</strong>
-            allowed: CAPITAL letters, special characters.
-          </li>
-          <li>
-
-            <strong>NOT</strong>
-            allowed: only numbers or consecutive hyphens.
-          </li>
-        </ul>
+        <Label>Username</Label>
+        <FormInputText placeholder="Username" />
+        <FormHelpText />
       </Box>
       <Box>
-      <Label>
-          Choose password
-        </Label>
-        <FormInput placeholder="Password with at least 8 and at most 512 characters (ASCII only)"/>
+        <Label>Choose password</Label>
+        <FormInputText type="password" placeholder="Password with at least 8 and at most 512 characters (ASCII only)" />
       </Box>
       <Box>
-      <Label>
-          Re-type password
-        </Label>
-        <FormInput placeholder="Retype password"/>
+        <Label>Re-type password</Label>
+        <FormInputText type="password" placeholder="Retype password" />
       </Box>
       <Box>
-        <FormInput type="checkbox"/>
-        <FormButton text="Create account"/>
+        <Box display="flex" alignItems="center">
+          <FormInputRadioCheck type="checkbox" id="id_accept" />
+          <Label htmlFor="id_accept" sx={{ paddingLeft: "1rem" }}>
+            I have read and accept the Ubuntu One terms of service, data privacy
+            policy and Canonical's SSO privacy notice.
+          </Label>
+        </Box>
+        <FormButton text="Create account" />
       </Box>
     </>
   );

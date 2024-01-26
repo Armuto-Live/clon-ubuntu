@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { styled, Box, Typography } from "@mui/material";
-import { MainLogin, MainRegister, FormInput,Label } from "./index";
+import { MainLogin, MainRegister, FormInputText,Label,FormInputRadioCheck } from "./index";
 import {
   PStrip,
   LayoutMaxWidth,
@@ -92,25 +92,25 @@ export const Main = () => {
         }}
       >
         <LayoutMaxWidth sx={{ maxWidth: "72em" }}>
-          <GridRow xxs="span 4" xs="span 6" md="span 12">
+          <GridRow xxs="span 4" xs="span 6" sm="span 6" md="span 12">
             <Title>One account for everything on Ubuntu</Title>
           </GridRow>
         </LayoutMaxWidth>
       </PStrip>
       <PStrip>
         <LayoutMaxWidth sx={{ maxWidth: "72em" }}>
-          <GridRow xxs="span 4" xs="span 6" md="span 6">
+          <GridRow xxs="span 4" xs="span 6" sm="span 6" md="span 6">
             <Form>
-              <FormTitle>Ubuntu One › log in</FormTitle>
+              <FormTitle>Ubuntu One › {isLogin ? "log in" : "create account"}</FormTitle>
               <Line sx={{ marginBottom: "15px" }} />
               <Box>
                 <Box>
                   <form action="">
                     <div>
                       <Label>Please type your email:</Label>
-                      <FormInput placeholder="Your email address" />
+                      <FormInputText placeholder="Your email address" />
                       <Box display="flex" alignItems="center">
-                        <LoginFormRadio
+                        <FormInputRadioCheck
                           type="radio"
                           id="new_user"
                           value="create"
@@ -125,7 +125,7 @@ export const Main = () => {
                         </Label>
                       </Box>
                       <Box display="flex" alignItems="center">
-                        <LoginFormRadio
+                        <FormInputRadioCheck
                           type="radio"
                           id="return_user"
                           value="login"

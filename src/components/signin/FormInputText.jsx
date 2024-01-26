@@ -11,7 +11,7 @@ const FormInputContent = styled("input")(({ theme }) => ({
     lineHeight: "1.5rem",
   }));
   
-export const FormInput = ({type,placeholder}) => {
+export const FormInputText = ({type,placeholder}) => {
   return (
     <FormInputContent type={type} placeholder={placeholder}/>
   )

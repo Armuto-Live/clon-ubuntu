@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FooterListItem } from "./FooterListItem.jsx";
+import { FooterListItem,ListIcons,Line } from "./index.js";
 import {
   styled,
   Box,
@@ -18,8 +18,10 @@ import {
 } from "../../global/index";
 
 import { DataFooter } from "./contentFooter.js";
+import './style.css';
 
 const FooterContainer = styled(Box)(({ theme }) => ({
+  paddingBottom:"2.5rem",
   [theme.breakpoints.up("sm")]: {
     padding: "2.5rem 0",
   },
@@ -27,7 +29,9 @@ const FooterContainer = styled(Box)(({ theme }) => ({
 
 const FooterLinks = styled("li")(({ theme }) => ({
   listStyleType: "none",
-  padding: "0",
+  [theme.breakpoints.up("sm")]:{
+    paddingBottom:"1rem",
+  }
 }));
 
 const FooterItem = styled(Accordion)(({ theme }) => ({
@@ -35,22 +39,20 @@ const FooterItem = styled(Accordion)(({ theme }) => ({
   borderBottom: "thin solid #d9d9d9",
   borderRadius: "none",
   fontSize: ".8rem",
+  padding: "0 1rem",
   [theme.breakpoints.up("sm")]: {
     padding: "0",
     borderBottom: "none",
+    paddingBottom:".3rem",
   },
 }));
 
 const FooterTitle = styled(AccordionSummary)(({ theme }) => ({
   margin: "0",
-  padding: "0",
-  "&:.css-195c94e-MuiButtonBase-root-MuiAccordionSummary-root": {
-    cursor: "default",
-  },
-  "&:.css-o4b71y-MuiAccordionSummary-content": {
-    margin: "0",
-    cursor: "default",
-  },
+  padding: "1rem 0",
+  [theme.breakpoints.up('sm')]:{
+    padding:".1rem 0",
+  }
 }));
 
 const FooterSecondLevel = styled("h2")(({ theme }) => ({}));
@@ -86,7 +88,7 @@ export const Footer = () => {
   ];
   return (
     <FooterContainer>
-      <LayoutMaxWidth>
+      <LayoutMaxWidth sx={{padding:"0"}}>
         {datos.map((datos, index) => (
           <GridRow xxs="span 4" sm="span 2" md="span 2" key={index}>
             {datos.map(({ id, title, menu }) => {
@@ -100,7 +102,7 @@ export const Footer = () => {
                     {menu.map(({ name, link }, index) => {
                       return (
                         <FooterAccordionDetails
-                          sx={{ padding: "0" }}
+                          sx={{ padding: {xxs:"1rem 0",sm:"0"},lineHeight:"1.5rem",fontWeight:"400"}}
                           key={index}
                         >
                           <LinkItem to={link} sx={{ color: "black" }}>
@@ -116,13 +118,13 @@ export const Footer = () => {
           </GridRow>
         ))}
       </LayoutMaxWidth>
-      <hr />
+      <Line />
       <LayoutMaxWidth>
         <GridRow
           xxs="span 4"
           sm="span 6"
           md="span 7"
-          sx={{ paddingTop: "1.5rem" }}
+          sx={{ paddingTop: {xxs:"1.5rem",sm:"0"} }}
         >
           <FooterList>
             <FooterListItem
@@ -144,7 +146,7 @@ export const Footer = () => {
             <FooterListItem text="Resources" />
             <FooterListItem text="Press centre" />
           </FooterList>
-          <Typography variant="subtitle2">
+          <Typography variant="subtitle2" sx={{fontWeight:"300"}}>
             © 2024 Canonical Ltd. Ubuntu and Canonical are registered trademarks
             of Canonical Ltd.
           </Typography>
@@ -155,8 +157,8 @@ export const Footer = () => {
             <FooterListItem text="Report a bug on this site" />
           </FooterList>
         </GridRow>
-        <GridRow xxs="span 4" sm="span 6" md="span 5">
-          as
+        <GridRow xxs="span 4" sm="span 6" md="span 5" sx={{alignItems:"flex-end"}}>
+          <ListIcons/>
         </GridRow>
       </LayoutMaxWidth>
     </FooterContainer>

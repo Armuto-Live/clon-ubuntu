@@ -11,10 +11,14 @@ const ButtonSubmit = styled("button")(({ theme }) => ({
     fontWeight: "300",
     fontFamily: "ubuntu",
     transition: "background-color 0.165s cubic-bezier(0.55, 0.055, 0.675, 0.19)",
+    width:"100%",
     "&:hover": {
       backgroundColor: "#095615",
       cursor: "pointer",
     },
+    [theme.breakpoints.up('xs')]:{
+      width:"inherit"
+    }
   }));
 
 export const FormButton = ({text}) => {
