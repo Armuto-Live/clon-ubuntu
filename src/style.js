@@ -29,6 +29,7 @@ export const Layout = styled(Box)((theme) => ({
 export const Header = styled(Box)((theme) => ({
   background: BLACK_COLOR,
   color: WHITE_COLOR,
+  position:"relative",
 }));
 
 export const NavigationRow = styled(Box)((theme) => ({
@@ -95,7 +96,7 @@ export const NavigationLoginLink = styled(Link)((theme) => ({
 export const NavigationNavContainer = styled(Box)((theme) => ({
   display: "flex",
   flexDirection: "column-reverse",
-  position:"relative",
+  /* position:"relative", */
   "@media (min-width: 620px)": {
     // flexDirection: "column",
   },

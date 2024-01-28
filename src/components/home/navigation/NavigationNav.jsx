@@ -1,6 +1,12 @@
+import { useState } from "react";
 import { LinkItem } from "../../global";
-import { NavigationItem } from "./NavigationItem";
-import { NavigationSearch } from "./NavigationSearch";
+import { NavigationItem, NavigationSearch } from "./index";
+import {
+  ViewEnterprise,
+  ViewDeveloper,
+  ViewComunnity,
+  ViewDownload,
+} from "../../navbarOptions/index";
 
 import {
   NavigationNavContainer,
@@ -10,33 +16,70 @@ import {
   NavigationLoginLinkHeader,
 } from "../../../style";
 
-import { IconButton, Box, Typography } from "@mui/material";
+import { IconButton, Box, Typography,Grid } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
 export const NavigationNav = () => {
-  
-  const showSearchInput=()=>{
-    console.log("asd");
-  }
-  
+  const [selectedOption, setSelectedOption] = useState(null);
+
+  const options = [
+    {
+      id: 1,
+      title: "Enterprise",
+      content: <ViewEnterprise />,
+    },
+    {
+      id: 2,
+      title: "Developer",
+      content: <ViewDeveloper />,
+    },
+    {
+      id: 3,
+      title: "Comunnity",
+      content: <ViewComunnity />,
+    },
+    {
+      id: 4,
+      title: "Download",
+      content: <ViewDownload />,
+    },
+  ];
+
+  const handleOptionClick = (option) => {
+    if (option === selectedOption) {
+      setSelectedOption(null);
+    } else {
+      setSelectedOption(option);
+    }
+  };
+
   return (
     <NavigationNavContainer>
-      <NavigationItems>
+      {/* <NavigationItems>
         <NavigationItem name={"Enterprise"} />
         <NavigationItem name={"Developer"} />
         <NavigationItem name={"Community"} />
         <NavigationItem name={"Download"} />
+      </NavigationItems> */}
+      <NavigationItems>
+
+      {options.map((options, index) => (
+        <Box key={index}>
+          <NavigationItem onClick={() => handleOptionClick(index)} name={options.title} />
+          {selectedOption === index && (
+            <Box position="absolute" left="0" top="56px" zIndex={999} >
+              {options.content}
+            </Box>
+          )}
+        </Box>
+      ))}
       </NavigationItems>
       <NavigationSearch />
       <NavigationItemHideSmall>
         <IconButton
           size="small"
           sx={{ padding: "1rem 1rem 1rem 1.5rem", color: "white" }}
-          onClick={showSearchInput}
         >
-          {/* <Typography variant="body1" color="white" sx={{ marginRight: ".3rem",display: { xxs: "none", md: "flex" } }}>
-            Search
-          </Typography> */}
           <SearchIcon sx={{ fontSize: "18px" }} />
         </IconButton>
         <Box>
