@@ -1,5 +1,4 @@
-import React from "react";
-
+import { useState, useRef } from "react";
 import {
   Header,
   NavigationRow,
@@ -11,10 +10,77 @@ import {
   NavigationLoginLink,
 } from "../../../style";
 
+import {
+  ViewEnterprise,
+  ViewDeveloper,
+  ViewComunnity,
+  ViewDownload,
+} from "../../navbarOptions/index";
+
 import { LinkItem } from "../../global";
 import { NavigationNav } from "./NavigationNav";
+import { Box, styled } from "@mui/material";
+
+const ContentView = styled(Box)(({ theme }) => ({
+  position: "absolute",
+  top: "100%",
+  left: "0",
+  right: "0",
+  backgroundColor: "white",
+  color: "#000",
+  zIndex: "999",
+}));
 
 export const Navigation = () => {
+  const [selectedOption, setSelectedOption] = useState(null);
+  const [index, setIndex] = useState(null);
+  const options = [
+    {
+      id: 1,
+      title: "Enterprise",
+      content: <ViewEnterprise />,
+    },
+    {
+      id: 2,
+      title: "Developer",
+      content: <ViewDeveloper />,
+    },
+    {
+      id: 3,
+      title: "Comunnity",
+      content: <ViewComunnity />,
+    },
+    {
+      id: 4,
+      title: "Download",
+      content: <ViewDownload />,
+    },
+  ];
+
+  const handleOptionClick = (e, option) => {
+    if (option === selectedOption) {
+      setSelectedOption(null);
+      setIndex(null);
+    } else {
+      setSelectedOption(option);
+      setIndex(option);
+    }
+  };
+
+  const changeStyle = (selectedOption) => {
+    return {
+      color: selectedOption === index ? "#111" : "#fff",
+      backgroundColor: selectedOption === index ? "#fff" : "#333",
+      "&:after": {
+        backgroundImage:
+          selectedOption === index
+            ? `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath fill='%23111' d='M8.187 11.748l6.187-6.187-1.06-1.061-5.127 5.127L3.061 4.5 2 5.561z'/%3E%3C/svg%3E")`
+            : `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath fill='%23d9d9d9' d='M8.187 11.748l6.187-6.187-1.06-1.061-5.127 5.127L3.061 4.5 2 5.561z'/%3E%3C/svg%3E")`,
+        color: selectedOption === index ? "#111" : "#fff",
+        transform: selectedOption === index ? "rotate(180deg)" : "rotate(0deg)",
+      },
+    };
+  };
   return (
     <Header>
       <NavigationRow>
@@ -44,8 +110,15 @@ export const Navigation = () => {
             <NavigationLoginLink to={"/signIn"}>Sign in</NavigationLoginLink>
           </NavigationLogin>
         </NavigationBanner>
-        <NavigationNav />
+        <NavigationNav
+          options={options}
+          handleOptionClick={handleOptionClick}
+          changeStyle={changeStyle}
+        />
       </NavigationRow>
+      {selectedOption === index && (
+        <ContentView>{options[index]?.content}</ContentView>
+      )}
     </Header>
   );
 };

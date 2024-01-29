@@ -1,17 +1,12 @@
 import React from "react";
 import { styled, Link } from "@mui/material";
 import { TakeOverCtasParraf, TakeOverLinkButton } from "../../style";
-export const Button = ({ text }) => {
+export const Button = ({ isStart,text }) => {
   return (
     <TakeOverCtasParraf
-      sx={{
-        textAlign: "center",
-        "@media (min-width:876px)": {
-          textAlign: "start",
-        },
-      }}
+      sx={{ textAlign: isStart && "start" }}
     >
-      <TakeOverLinkButton>Get Ubuntu Pro</TakeOverLinkButton>
+      <TakeOverLinkButton>{text}</TakeOverLinkButton>
     </TakeOverCtasParraf>
   );
 };

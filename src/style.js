@@ -112,22 +112,23 @@ export const NavigationItems = styled("ul")((theme) => ({
   padding: "0",
   display: "flex",
   margin: "0",
+  position:"relative",
   justifyContent: "space-between",
+  height:"100%",
 }));
 
-export const NavigationItemContent = styled(Link)((theme) => ({
+export const NavigationItemContent = styled("li")((theme) => ({
   position: "relative",
   padding: "1rem 0.375rem",
   lineHeight: "1.5rem",
   textAlign: "center",
   flex: "1",
   textDecoration: "none",
-  color: WHITE_COLOR,
-  "&:hover": {
+  /* "&:hover": {
     textDecoration: "underline 1px",
     textUnderlineOffset: ".075em",
     backgroundColor: "#2b2b2b",
-  },
+  }, */
   "@media (min-width: 620px)": {
     padding: "1rem 1.5rem",
   },
@@ -289,7 +290,11 @@ export const TakeOverCtasParraf = styled("p")(({ theme }) => ({
   marginTop: "0",
   paddingTop: ".4rem",
   maxWidth: "40em",
+  textAlign:"center",
   marginBottom: "1.1rem",
+  "@media (min-width:876px)":{
+    textAlign:"start",
+  }
 }));
 
 export const TakeOverLinkButton = styled(Link)((theme) => ({

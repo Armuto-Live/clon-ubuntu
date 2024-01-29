@@ -6,3 +6,4 @@ export * from './LineSeparator';
 export * from './PStrip';
 export * from './LayoutMaxWidth';
 export * from './LinkItem';
+export * from './ParagraphSmall';

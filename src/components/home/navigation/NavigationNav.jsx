@@ -1,12 +1,7 @@
-import { useState } from "react";
+import { useState,useRef } from "react";
 import { LinkItem } from "../../global";
 import { NavigationItem, NavigationSearch } from "./index";
-import {
-  ViewEnterprise,
-  ViewDeveloper,
-  ViewComunnity,
-  ViewDownload,
-} from "../../navbarOptions/index";
+
 
 import {
   NavigationNavContainer,
@@ -16,43 +11,12 @@ import {
   NavigationLoginLinkHeader,
 } from "../../../style";
 
-import { IconButton, Box, Typography,Grid } from "@mui/material";
+import { IconButton, styled, Box, Typography, Grid } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
-export const NavigationNav = () => {
-  const [selectedOption, setSelectedOption] = useState(null);
 
-  const options = [
-    {
-      id: 1,
-      title: "Enterprise",
-      content: <ViewEnterprise />,
-    },
-    {
-      id: 2,
-      title: "Developer",
-      content: <ViewDeveloper />,
-    },
-    {
-      id: 3,
-      title: "Comunnity",
-      content: <ViewComunnity />,
-    },
-    {
-      id: 4,
-      title: "Download",
-      content: <ViewDownload />,
-    },
-  ];
 
-  const handleOptionClick = (option) => {
-    if (option === selectedOption) {
-      setSelectedOption(null);
-    } else {
-      setSelectedOption(option);
-    }
-  };
-
+export const NavigationNav = ({options,handleOptionClick,changeStyle}) => {
   return (
     <NavigationNavContainer>
       {/* <NavigationItems>
@@ -62,17 +26,13 @@ export const NavigationNav = () => {
         <NavigationItem name={"Download"} />
       </NavigationItems> */}
       <NavigationItems>
-
-      {options.map((options, index) => (
-        <Box key={index}>
-          <NavigationItem onClick={() => handleOptionClick(index)} name={options.title} />
-          {selectedOption === index && (
-            <Box position="absolute" left="0" top="56px" zIndex={999} >
-              {options.content}
-            </Box>
-          )}
-        </Box>
-      ))}
+        {options.map((options, index) => (
+            <NavigationItem
+              onClick={(e) => handleOptionClick(e,index)}
+              name={options.title} key={index}
+              style={changeStyle(index)}
+            />
+        ))}
       </NavigationItems>
       <NavigationSearch />
       <NavigationItemHideSmall>

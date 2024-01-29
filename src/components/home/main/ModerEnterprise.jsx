@@ -33,7 +33,7 @@ export const ModerEnterprise = () => {
             Security, support, and managed services from the publisher of
             Ubuntu.
           </Typography>
-          <Button />
+          <Button text="Get Ubuntu Pro" />
         </GridRow>
         <GridRow xxs="span 4" sm="span 2" md="span 6">
           <StripNoticeLogoSection>
