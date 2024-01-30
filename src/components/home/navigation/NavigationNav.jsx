@@ -16,7 +16,7 @@ import SearchIcon from "@mui/icons-material/Search";
 
 
 
-export const NavigationNav = ({options,handleOptionClick,changeStyle}) => {
+export const NavigationNav = ({options,handleOptionClick,changeStyle,handleChange}) => {
   return (
     <NavigationNavContainer>
       {/* <NavigationItems>

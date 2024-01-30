@@ -9,11 +9,11 @@ const Title = styled(Typography)(({ theme }) => ({
   letterSpacing: ".05rem",
   marginBottom: ".6rem",
   fontSize: "1.294rem",
-  paddingTop:".45rem",
+  paddingTop:".4rem",
 }));
-export const TitleMobile = ({ text }) => {
+export const TitleMobile = ({ text,sx }) => {
   return (
-    <Title  sx={{display:{xxs:"block",sm:"none"}}}>
+    <Title  sx={sx}>
       <LinkItem>{text}</LinkItem>
     </Title>
   );

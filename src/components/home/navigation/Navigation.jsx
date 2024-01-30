@@ -21,11 +21,17 @@ import { LinkItem } from "../../global";
 import { NavigationNav } from "./NavigationNav";
 import { Box, styled } from "@mui/material";
 
+import Collapse from '@mui/material/Collapse';
 const ContentView = styled(Box)(({ theme }) => ({
+  transitionDuration:".333s",
+  transitionProperty:"all",
+  transitionTimingFunction:"cubic-bezier(0.55, 0.055, 0.675, 0.19)",
   position: "absolute",
   top: "100%",
   left: "0",
   right: "0",
+  width:"100%",
+  height:"auto",
   backgroundColor: "white",
   color: "#000",
   zIndex: "999",
@@ -33,6 +39,8 @@ const ContentView = styled(Box)(({ theme }) => ({
 
 export const Navigation = () => {
   const [selectedOption, setSelectedOption] = useState(null);
+  const [checked, setChecked] = useState(false);
+
   const [index, setIndex] = useState(null);
   const options = [
     {
@@ -57,13 +65,16 @@ export const Navigation = () => {
     },
   ];
 
+  
   const handleOptionClick = (e, option) => {
     if (option === selectedOption) {
       setSelectedOption(null);
       setIndex(null);
+      setChecked(false);
     } else {
       setSelectedOption(option);
       setIndex(option);
+      setChecked(true);
     }
   };
 
@@ -117,7 +128,9 @@ export const Navigation = () => {
         />
       </NavigationRow>
       {selectedOption === index && (
-        <ContentView>{options[index]?.content}</ContentView>
+        <Collapse in={checked}>
+          <ContentView>{options[index]?.content}</ContentView>
+        </Collapse>
       )}
     </Header>
   );

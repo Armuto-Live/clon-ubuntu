@@ -5,3 +5,4 @@ export * from './enterprise/ViewEnterprise';
 export * from './TitleMobile';
 export * from './TextListSmall';
 export * from './TextListSmallItem';
+export * from './HeadingSmall';
