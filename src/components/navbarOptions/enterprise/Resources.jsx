@@ -1,5 +1,5 @@
-import { styled, Box } from "@mui/material";
-import { GridRow, LinkItem, Line } from "../../global/index";
+import { Box } from "@mui/material";
+import { GridRow, Line } from "../../global/index";
 import { HeadingSmall, HeadingSmallListItem } from "../index";
 
 export const Resources = () => {

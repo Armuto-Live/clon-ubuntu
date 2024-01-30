@@ -1,14 +1,9 @@
-import { styled, Box, Typography } from "@mui/material";
 import {
   PStrip,
   LayoutMaxWidth,
   GridRow,
-  LinkItem,
-  ParagraphSmall,
-  Button,
   Line,
 } from "../../global/index";
-import { TitleMobile, TextListSmallItem } from "../index";
 import {
   OpenStack,
   Kubernetes,
@@ -21,15 +16,6 @@ import {
   Partners,
   BottomContent
 } from "./index";
-
-const ListItems = styled("ul")(({ theme }) => ({
-  display: "block",
-  margin: "0",
-  marginBottom: "1.45rem",
-  fontSize: ".875rem",
-  lineHeight: "1.25rem",
-  paddingTop: ".55rem",
-}));
 
 export const ViewEnterprise = () => {
   return (

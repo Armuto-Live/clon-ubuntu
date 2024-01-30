@@ -1,7 +1,5 @@
-import { styled, Box, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import {
-  PStrip,
-  LayoutMaxWidth,
   GridRow,
   LinkItem,
   ParagraphSmall,

@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material";
 import { GridRow } from "../../global/index";
 
-import { TitleMobile, TextListSmallItem, TextListSmall } from "../index";
+import { TitleMobile, TextListSmall } from "../index";
 export const Partners = () => {
   return (
     <GridRow xxs="span 4" sm="span 6" md="span 4">

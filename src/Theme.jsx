@@ -60,7 +60,7 @@ let theme = createTheme({
       maxWidth:"40em",
       paddingTop:".45rem",
       "@media (min-width: 620px)": {
-        fontSize: "1.54rem",
+        fontSize: "24px",
       },
     },
     subtitle1:{
