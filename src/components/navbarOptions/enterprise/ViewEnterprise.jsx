@@ -51,9 +51,8 @@ export const ViewEnterprise = () => {
         <DataCentre/>
         <AIAndML/>
         <Partners/>
-        <GridRow xxs="span 4" sm="span 6" md="span 12" sx={{display:{xxs:"none",sm:"block"}}}>
-          <Line />
-        </GridRow>
+      </LayoutMaxWidth>
+      <LayoutMaxWidth >
         <BottomContent/>
       </LayoutMaxWidth>
     </PStrip>

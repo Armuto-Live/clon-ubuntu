@@ -14,6 +14,10 @@ const ListItem=styled('li')(({theme})=>({
     height:"1px",
     left:"0",
     right:"0",
+  },
+  "&:last-of-type::after":{
+    content:"''",
+    height:"0",
   }
 }));
 

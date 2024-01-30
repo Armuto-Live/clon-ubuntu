@@ -1,17 +1,17 @@
-import { styled, Box } from "@mui/material";
-import { GridRow, LinkItem,Line } from "../../global/index";
-import { HeadingSmall, HeadingSmallListItem } from "../index";
-import { Sectors,FullyManaged,Resources,Consulting } from "./index";
+import { styled } from "@mui/material";
+import {
+  LinkItem,
+} from "../global/index";
 
 const ListItem = styled("li")(({ theme }) => ({
   display: "inline",
   position: "relative",
   padding: "0",
   margin: "0",
-  fontSize: "14px",
+  fontSize:"14px",
   lineHeight: "1.25rem",
   paddingTop: ".55rem",
-  marginRight: ".5rem",
+  marginRight:".6rem",
   [theme.breakpoints.up("xxs")]: {
     "&::after": {
       position: "relative",
@@ -21,6 +21,8 @@ const ListItem = styled("li")(({ theme }) => ({
     },
   },
   [theme.breakpoints.up("md")]: {
+    fontSize: "15.3px",
+    marginRight: ".8rem",
     "&::after": {
       position: "relative",
       content: "'•'",
@@ -30,19 +32,13 @@ const ListItem = styled("li")(({ theme }) => ({
     "&:last-of-type::after": {
       position: "relative",
       content: "''",
-      lineHeight: "1.5rem",
-      right: "-.25rem",
     },
   },
 }));
-
-export const BottomContent = () => {
+export const HeadingSmallListItem = ({text}) => {
   return (
-    <>
-      <Sectors/>
-      <FullyManaged/>
-      <Resources/>
-      <Consulting/>
-    </>
+    <ListItem>
+      <LinkItem>{text}</LinkItem>
+    </ListItem>
   );
 };

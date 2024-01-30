@@ -11,3 +11,7 @@ export * from './Partners';
 
 
 export * from './BottomContent';
+export * from './Sectors';
+export * from './FullyManaged';
+export * from './Resources';
+export * from './Consulting';
