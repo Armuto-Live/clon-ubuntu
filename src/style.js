@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { styled, Box, Grid, Button, IconButton } from "@mui/material";
+import { styled, Box, Grid, Button, IconButton,Typography } from "@mui/material";
 
 const ORANGE_COLOR = "#e95420";
 const WHITE_COLOR = "#FFFFFF";
@@ -427,4 +427,14 @@ export const Items = styled("ul")(({ theme }) => ({
     columns: "2",
     columnGap: "2rem",
   },
+}));
+
+export const ViewNavbarTitle = styled(Typography)(({ theme }) => ({
+margin:"0",
+fontWeight: "550",
+fontVariantCaps: "all-small-caps",
+letterSpacing: ".05rem",
+marginBottom: ".6rem",
+fontSize: "1.294rem",
+paddingTop:".4rem",
 }));

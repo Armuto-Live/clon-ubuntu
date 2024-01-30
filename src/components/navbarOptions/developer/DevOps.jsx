@@ -11,7 +11,7 @@ export const DevOps = () => {
       </Box>
       <TitleMobile
         text={"Devops"}
-        sx={{ display: { xxs: "block", sm: "none" }, color: "inherit" }}
+        sx={{ display: { xxs: "block", sm: "none" }, color: "black" }}
       />
       <TextListSmall>
         <TextListSmallItem text="Ubuntu images on public clouds" />

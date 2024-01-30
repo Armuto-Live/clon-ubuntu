@@ -21,18 +21,16 @@ const ListItem = styled("li")(({ theme }) => ({
     },
   },
   [theme.breakpoints.up("md")]: {
-    fontSize: "15.3px",
     marginRight: ".8rem",
     "&::after": {
-      position: "relative",
       content: "'•'",
-      lineHeight: "1.5rem",
-      right: "-.25rem",
     },
     "&:last-of-type::after": {
-      position: "relative",
       content: "''",
     },
+  },
+  [theme.breakpoints.up("lg")]: {
+    fontSize: "15.3px",
   },
 }));
 export const HeadingSmallListItem = ({text}) => {
