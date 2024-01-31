@@ -95,6 +95,7 @@ export const NavigationLoginLink = styled(Link)((theme) => ({
 
 export const NavigationNavContainer = styled(Box)((theme) => ({
   display: "flex",
+  position:"relative",
   flexDirection: "column-reverse",
   /* position:"relative", */
   "@media (min-width: 620px)": {

@@ -1,0 +1,28 @@
+body{
+    overflow-y:visible !important;
+    padding-right: 0 !important;
+}
+.modal{
+    z-index: 998;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(255, 158, 47, 0.2);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.is-open{
+    display: flex;
+}
+
+.modal-container{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-main);
+    width: 50vw;
+    height: 60vh;
+    border-radius: 1rem;
+    padding: .5rem;
+}
