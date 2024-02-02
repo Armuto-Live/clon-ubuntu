@@ -8,8 +8,8 @@ const  Title=styled(Typography)(({theme})=>({
     textTransform:"uppercase",
     fontWeight:"275",
 }))
-export const HeadingSmall = ({text}) => {
+export const HeadingSmall = ({text,sx}) => {
   return (
-    <Title>{text}</Title>
+    <Title sx={sx}>{text}</Title>
   )
 }

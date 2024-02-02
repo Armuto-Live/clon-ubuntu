@@ -38,7 +38,7 @@ export const ViewEnterprise = () => {
         <AIAndML/>
         <Partners/>
       </LayoutMaxWidth>
-      <LayoutMaxWidth >
+      <LayoutMaxWidth>
         <BottomContent/>
       </LayoutMaxWidth>
     </PStrip>

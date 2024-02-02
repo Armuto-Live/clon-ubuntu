@@ -30,6 +30,7 @@ export const Header = styled(Box)((theme) => ({
   background: BLACK_COLOR,
   color: WHITE_COLOR,
   position:"relative",
+  zIndex:"999",
 }));
 
 export const NavigationRow = styled(Box)((theme) => ({
@@ -125,11 +126,7 @@ export const NavigationItemContent = styled("li")((theme) => ({
   textAlign: "center",
   flex: "1",
   textDecoration: "none",
-  /* "&:hover": {
-    textDecoration: "underline 1px",
-    textUnderlineOffset: ".075em",
-    backgroundColor: "#2b2b2b",
-  }, */
+
   "@media (min-width: 620px)": {
     padding: "1rem 1.5rem",
   },
@@ -154,6 +151,12 @@ export const NavigationItemContent = styled("li")((theme) => ({
       top: "0",
       right: "0",
     },
+/*     "&:hover": {
+      textDecoration: "underline 1px",
+      textUnderlineOffset: ".075em",
+      backgroundColor: "#2b2b2b",
+      cursor:"pointer",
+    },   */
   },
   "@media (min-width: 1681px)": {
     padding: "18px 36px 18px 18px",
@@ -163,13 +166,9 @@ export const NavigationItemContent = styled("li")((theme) => ({
 export const NavigationContainerSearch = styled(Box)(({theme}) => ({
   marginTop: "1rem",
   paddingTop: "1rem",
+  zIndex:"40",
   [theme.breakpoints.up('md')]:{
-    display:"none",
-    position:"absolute",
-    left:"0",
-    right:"0",
-    top:"0",
-    bottom:"0",
+    width:"100%",
     margin:".6rem 0 auto auto",
     marginLeft:"1rem",
     padding:"0",
@@ -183,6 +182,7 @@ export const NavigationForm = styled("form")(({theme}) => ({
   justifyContent: "flex-end",
   position: "relative",
   [theme.breakpoints.up('md')]:{
+    width:"100%",
     margin:"0",
   }
 }));

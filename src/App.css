@@ -1,28 +1,16 @@
-body{
-    overflow-y:visible !important;
-    padding-right: 0 !important;
-}
 .modal{
-    z-index: 998;
-    width: 100%;
-    min-height: 100vh;
-    background-color: rgba(255, 158, 47, 0.2);
+    z-index: 40;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(17,17,17,.4);
+    opacity: 0;
+    transition: all 1s ease-in-out;
     display: none;
-    justify-content: center;
-    align-items: center;
 }
-
 .modal.is-open{
     display: flex;
-}
-
-.modal-container{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    background-color: var(--color-main);
-    width: 50vw;
-    height: 60vh;
-    border-radius: 1rem;
-    padding: .5rem;
+    opacity: 1;
 }

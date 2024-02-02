@@ -9,10 +9,10 @@ const ListItems=styled('ul')(({theme})=>({
   lineHeight:"1.25rem",
   paddingTop:".55rem",
 }))
-export const TextListSmall = ({children}) => {
+export const TextListSmall = ({children,sx}) => {
   return (
     <>
-    <ListItems>
+    <ListItems sx={sx}>
       {children}
     </ListItems>
     </>

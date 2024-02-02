@@ -10,28 +10,45 @@ import {
 
 import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from "@mui/icons-material/Close";
+import { useMediaQuery, useTheme } from "@mui/material";
 
-export const NavigationSearch = () => {
+export const NavigationSearch = ({ isOpenModal, closeModal }) => {
   const [inputValue, setInputValue] = useState("");
-  const refCloseIcon = useRef("");
+  const refCloseIcon = useRef(null);
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("md"));
 
   const searchValue = (e) => {
-    if (e.target.value.length) {
-      setInputValue(e.target.value);
-      refCloseIcon.current.style.display = "flex";
-    } else {
-      setInputValue('');
-      refCloseIcon.current.style.display = "none";
+    const value = e.target.value;
+    setInputValue(value);
+
+    if (!matches) {
+      refCloseIcon.current.style.display = value.length ? "flex" : "none";
     }
   };
 
-  const clearInput = (e) => {
+  const clearInput = () => {
     setInputValue("");
-    refCloseIcon.current.style.display = "none";
+    if (!matches) {
+      refCloseIcon.current.style.display = "none";
+    } else {
+      closeModal();
+      refCloseIcon.current.style.display = "flex";
+    }
   };
 
+  useEffect(() => {
+    if (!matches) {
+      refCloseIcon.current.style.display = inputValue ? "flex" : "none";
+    } else {
+      refCloseIcon.current.style.display = "flex";
+    }
+  }, [matches, inputValue]);
+
   return (
-    <NavigationContainerSearch>
+    <NavigationContainerSearch
+      sx={{ display: { xxs: "block", md: isOpenModal ? "block" : "none" } }}
+    >
       <NavigationForm>
         <NavigationFormInput
           placeholder="Search our sites"
@@ -40,17 +57,13 @@ export const NavigationSearch = () => {
         />
         <NavigationFormButton
           ref={refCloseIcon}
-          sx={{
-            marginRight: ".1875rem",
-            display:"none",
-          }}
-
+          sx={{ display: { xxs: "none", md: "block" } }}
           onClick={clearInput}
         >
           <CloseIcon fontSize="small" />
         </NavigationFormButton>
-        <NavigationFormButton >
-          <SearchIcon fontSize="small"/>
+        <NavigationFormButton sx={{ display: { xxs: "flex", md: "none" } }}>
+          <SearchIcon fontSize="small" />
         </NavigationFormButton>
       </NavigationForm>
     </NavigationContainerSearch>

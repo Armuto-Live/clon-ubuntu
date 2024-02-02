@@ -7,3 +7,4 @@ export * from './Tutorials';
 export * from './ReadTheDocs';
 export * from './OtherWays';
 export * from './UbuntuFlavours';
+export * from './Description';
