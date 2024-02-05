@@ -130,7 +130,12 @@ export const NavigationItemContent = styled("li")((theme) => ({
   textAlign: "center",
   flex: "1",
   textDecoration: "none",
-
+  "&:hover":{
+    backgroundColor:"#2b2b2b",
+    cursor:"pointer",
+    color:"white",
+    textDecoration: "underline 1px",
+  },
   "@media (min-width: 620px)": {
     padding: "1rem 1.5rem",
   },

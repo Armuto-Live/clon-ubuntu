@@ -78,11 +78,14 @@ export const Navigation = () => {
       openModal();
     }
   };
-  
   const changeStyle = (selectedOption) => {
     return {
       color: selectedOption === indexViewNavbar && checkedCollapse ? "#111" : "#fff",
       backgroundColor: selectedOption === indexViewNavbar && checkedCollapse ? "#fff" : "#333",
+      "&:hover":{
+        backgroundColor:indexViewNavbar===selectedOption ? "white":"#2b2b2b",
+        color:indexViewNavbar===selectedOption ? "#000":"#fff",
+      },
       "&:after": {
         backgroundImage:
           selectedOption === indexViewNavbar && checkedCollapse
