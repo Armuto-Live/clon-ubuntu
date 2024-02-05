@@ -1,8 +1,7 @@
-import { useState, useRef } from "react";
+import { useState, useRef,useContext } from "react";
 import { LinkItem } from "../../global";
 import { NavigationItem, NavigationSearch } from "./index";
-import { useModal } from "../../../hooks/useModal";
-import { Modal } from "../../modal/Modal";
+
 
 import {
   NavigationNavContainer,
@@ -10,30 +9,31 @@ import {
   NavigationItemHideSmall,
 } from "../../../style";
 
-import { IconButton, styled, Box, Typography, Grid } from "@mui/material";
+import { IconButton, Box  } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
+import { Modal } from "../../modal/Modal";
+import { DataContext } from "../../../context/Context";
 
 export const NavigationNav = ({
   options,
   handleOptionClick,
   changeStyle,
-  handleChange,
 }) => {
-  const [isOpenModal, openModal, closeModal, setIsOpen] = useModal(false);
 
+  const {openModal,buttonSearch,setButtonSearch}=useContext(DataContext);
+
+  const openModalButton=()=>{
+    openModal();
+    setButtonSearch(true);
+  }
+  
   return (
     <>
-      <NavigationNavContainer sx={{ display: isOpenModal ? "none" : "flex" }}>
-        {/* <NavigationItems>
-        <NavigationItem name={"Enterprise"} />
-        <NavigationItem name={"Developer"} />
-        <NavigationItem name={"Community"} />
-        <NavigationItem name={"Download"} />
-      </NavigationItems> */}
+      <NavigationNavContainer sx={{ display: buttonSearch ? "none" : "flex" }}>
         <NavigationItems>
           {options.map((options, index) => (
             <NavigationItem
-              onClick={(e) => handleOptionClick(e, index)}
+              onClick={() => handleOptionClick(index)}
               name={options.title}
               key={index}
               style={changeStyle(index)}
@@ -45,7 +45,7 @@ export const NavigationNav = ({
           <IconButton
             size="small"
             sx={{ padding: "1rem 1rem 1rem 1.5rem", color: "white" }}
-            onClick={openModal}
+            onClick={openModalButton}
           >
             <SearchIcon sx={{ fontSize: "18px" }} />
           </IconButton>
@@ -67,8 +67,8 @@ export const NavigationNav = ({
           </Box>
         </NavigationItemHideSmall>
       </NavigationNavContainer>
-      <Modal isOpen={isOpenModal} closeModal={closeModal}></Modal>
-      <NavigationSearch isOpenModal={isOpenModal} closeModal={closeModal} />
+      <Modal></Modal>
+      <NavigationSearch />
     </>
   );
 };

@@ -38,7 +38,10 @@ export const NavigationRow = styled(Box)((theme) => ({
   paddingRight: "0",
   maxWidth: MAX_WIDTH,
   width: "100%",
+  display:"flex",
+  flexDirection:"column",
   "@media (min-width: 1037px)": {
+    flexDirection:"row",
     padding: "0 1.5rem",
     display: "flex",
     margin: "0 auto",
@@ -98,6 +101,7 @@ export const NavigationNavContainer = styled(Box)((theme) => ({
   display: "flex",
   position:"relative",
   flexDirection: "column-reverse",
+  order:"2",
   /* position:"relative", */
   "@media (min-width: 620px)": {
     // flexDirection: "column",
@@ -220,6 +224,7 @@ export const NavigationItemHideSmall = styled("ul")((theme) => ({
   listStyleType: "none",
   margin: "0",
   padding: "0",
+  order:"1",
   // padding:"1rem 1rem 1rem 1.5rem",
   "@media (min-width: 1037px)": {
     display: "flex",

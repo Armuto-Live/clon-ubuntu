@@ -1,4 +1,6 @@
 import { styled, Box } from "@mui/material";
+import { useContext } from "react";
+import { DataContext } from "../../context/Context";
 
 const ContainerModal = styled(Box)(({ theme, open }) => ({
   position: "fixed",
@@ -9,15 +11,16 @@ const ContainerModal = styled(Box)(({ theme, open }) => ({
   backgroundColor: "rgba(17,17,17,.4)",
   opacity: open ? 1 : 0,
   visibility: open ? "visible" : "hidden",
-  transition: "opacity .5s ease-in-out, visibility 1s ease-in-out",
-  zIndex: "40",
+  transition: "opacity .3s ease-in-out, visibility 1s ease-in-out",
+  zIndex: "-1",
   display:open? "flex":"none",
 }));
 
-export const Modal = ({ children, isOpen, closeModal }) => {
+export const Modal = () => {
+  
+  const {closeModal,isOpenModal} = useContext(DataContext);
   return (
-    <ContainerModal open={isOpen} onClick={closeModal} sx={{opacity:isOpen ? "1":"0"}}>
-      {children}
+    <ContainerModal open={isOpenModal} onClick={closeModal} sx={{opacity:isOpenModal ? "1":"0"}}>
     </ContainerModal>
   );
 };

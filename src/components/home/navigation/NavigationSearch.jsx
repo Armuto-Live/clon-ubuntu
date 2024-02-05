@@ -1,18 +1,19 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect,useContext } from "react";
 import {
   NavigationContainerSearch,
   NavigationForm,
   NavigationFormInput,
   NavigationFormButton,
-  NavigationFormButtonClose,
-  NavigationFormButtonSearch,
 } from "../../../style";
 
 import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from "@mui/icons-material/Close";
 import { useMediaQuery, useTheme } from "@mui/material";
+import { DataContext } from "../../../context/Context";
 
-export const NavigationSearch = ({ isOpenModal, closeModal }) => {
+export const NavigationSearch = () => {
+  const {closeModal,buttonSearch}=useContext(DataContext);
+
   const [inputValue, setInputValue] = useState("");
   const refCloseIcon = useRef(null);
   const theme = useTheme();
@@ -39,7 +40,7 @@ export const NavigationSearch = ({ isOpenModal, closeModal }) => {
 
   useEffect(() => {
     if (!matches) {
-      refCloseIcon.current.style.display = inputValue ? "flex" : "none";
+      refCloseIcon.current.style.display = !inputValue ? "none" : "flex";
     } else {
       refCloseIcon.current.style.display = "flex";
     }
@@ -47,7 +48,7 @@ export const NavigationSearch = ({ isOpenModal, closeModal }) => {
 
   return (
     <NavigationContainerSearch
-      sx={{ display: { xxs: "block", md: isOpenModal ? "block" : "none" } }}
+      sx={{ display: { xxs: "block", md: buttonSearch ? "block" : "none" } }}
     >
       <NavigationForm>
         <NavigationFormInput
