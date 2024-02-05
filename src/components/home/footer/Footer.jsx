@@ -9,6 +9,7 @@ import {
   useMediaQuery,
   Typography,
 } from "@mui/material";
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import {
   LayoutMaxWidth,
@@ -49,12 +50,16 @@ const FooterItem = styled(Accordion)(({ theme }) => ({
 
 const FooterTitle = styled(AccordionSummary)(({ theme }) => ({
   margin: "0",
-  padding: "1rem 0",
+  padding: "0",
   [theme.breakpoints.up('sm')]:{
     padding:".1rem 0",
   }
 }));
-
+const FooterTitleDesktop = styled(Typography)(({ theme }) => ({
+  margin: "0",
+  padding: "0",
+  color:"#000",
+}));
 const FooterSecondLevel = styled("h2")(({ theme }) => ({}));
 
 const FooterAccordionDetails = styled(AccordionDetails)(({ theme }) => ({
@@ -71,13 +76,15 @@ const FooterList = styled("ul")(({ theme }) => ({
   },
 }));
 
+
 export const Footer = () => {
   const isSmallScreen = useMediaQuery("(min-width:620px)");
-  const [expanded, setExpanded] = useState(isSmallScreen);
+  const [expanded, setExpanded] = useState(false);
 
-  const handleExpanded = () => {
-    setExpanded((prevExpanded) => !prevExpanded);
+  const handleExpanded = (panel) => (event,isExpanded)=>{
+      setExpanded(isExpanded ? panel : false);
   };
+
   const datos = [
     DataFooter.slice(0, 3),
     DataFooter.slice(3, 7),
@@ -95,10 +102,12 @@ export const Footer = () => {
               return (
                 <FooterLinks key={id}>
                   <FooterItem
-                    expanded={!isSmallScreen ? expanded : true}
-                    onChange={!isSmallScreen ? handleExpanded : () => {}}
+                    /* expanded={!isSmallScreen ? expanded : true}
+                    onChange={!isSmallScreen ? handleExpanded : () => {}} */
+                    expanded={!isSmallScreen ?  expanded  === id : true}
+                    onChange={!isSmallScreen ? handleExpanded(id) : () => {}}
                   >
-                    <FooterTitle>{title}</FooterTitle>
+                    {!isSmallScreen ? <FooterTitle expandIcon={<ExpandMoreIcon />}>{title}</FooterTitle> : <FooterTitleDesktop>{title}</FooterTitleDesktop>}
                     {menu.map(({ name, link }, index) => {
                       return (
                         <FooterAccordionDetails
